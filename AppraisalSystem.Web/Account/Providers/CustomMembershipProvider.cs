@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using AppraisalSystem.Web.AccountService;
+using System;
 using System.Web.Security;
 
 namespace AppraisalSystem.Web.Account.Providers
@@ -178,7 +176,11 @@ namespace AppraisalSystem.Web.Account.Providers
 
         public override bool ValidateUser(string username, string password)
         {
-            return true;
+            IAccountWcfService accountService = new AccountWcfServiceClient();
+
+            bool isExisting = accountService.ValidateUser(username, password);
+
+            return isExisting;
         }
     }
 }
