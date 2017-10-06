@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace AppraisalSystem.Web
 {
-	public partial class AdminPage : System.Web.UI.Page
-	{
-		protected void Page_Load(object sender, EventArgs e)
-		{
+    public partial class MainPage : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
 
-		}
-	}
+        }
+    }
 }

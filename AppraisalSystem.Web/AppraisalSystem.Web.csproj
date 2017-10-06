@@ -192,11 +192,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
-    <Content Include="AdminPage.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="Admin\EvaluationTemplate.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -207,7 +205,9 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Admin\MasterPageAdmin.master" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="MainPage.aspx" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -239,7 +239,6 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Service References\AccountService\AccountService.disco" />
@@ -257,7 +256,6 @@
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
-    <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
     <None Include="Service References\AccountService\AccountService.wsdl" />
@@ -291,38 +289,31 @@
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AdminPage.aspx.cs">
-      <DependentUpon>AdminPage.aspx</DependentUpon>
+    <Compile Include="Admin\EvaluationTemplate.aspx.cs">
+      <DependentUpon>EvaluationTemplate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdminPage.aspx.designer.cs">
-      <DependentUpon>AdminPage.aspx</DependentUpon>
+    <Compile Include="Admin\EvaluationTemplate.aspx.designer.cs">
+      <DependentUpon>EvaluationTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MasterPageAdmin.master.cs">
+      <DependentUpon>MasterPageAdmin.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MasterPageAdmin.master.designer.cs">
+      <DependentUpon>MasterPageAdmin.master</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.aspx.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainPage.aspx.designer.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\AccountService\Reference.cs">

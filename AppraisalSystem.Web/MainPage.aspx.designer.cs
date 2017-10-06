@@ -7,9 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AppraisalSystem.Web {
-    
-    
-    public partial class AdminPage {
+namespace AppraisalSystem.Web
+{
+
+
+    public partial class MainPage
+    {
     }
 }
