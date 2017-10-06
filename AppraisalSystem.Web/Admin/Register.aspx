@@ -1,13 +1,18 @@
-﻿<%@ Page Title="Register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="AppraisalSystem.Web.Account.Register" %>
+﻿<%@ Page Title="Create new account" 
+    Language="C#"
+     MasterPageFile="~/Admin/MasterPageAdmin.master" 
+    AutoEventWireup="true" 
+    CodeBehind="Register.aspx.cs"
+     Inherits="AppraisalSystem.Web.Admin.Register" %>
 
-<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderUsersArea" runat="server">
     <h2><%: Title %>.</h2>
     <p class="text-danger">
         <asp:Literal runat="server" ID="ErrorMessage" />
     </p>
 
     <div class="form-horizontal">
-        <h4>Create a new account</h4>
+       <%-- <h4>Create a new account</h4>--%>
         <hr />
         <asp:ValidationSummary runat="server" CssClass="text-danger" />
         <div class="form-group">
@@ -38,7 +43,7 @@
         </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <asp:Button runat="server" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-default" />
+                <asp:Button runat="server" OnClick="Create_User" Text="Register" CssClass="btn btn-default" />
             </div>
         </div>
     </div>

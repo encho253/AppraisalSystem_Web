@@ -8,9 +8,9 @@
     <aside class="users-sidebar">
         <ul>
             <li><a href="EvaluationTemplate.aspx">Create evaluation form</a></li>
-            <li><a href="Courses.aspx">Results</a></li>
-            <li><a href="Calendar.aspx">Calendar</a></li>
-            <li><a href="Resources.aspx">Resources</a></li>
+            <li><a href="Register.aspx">Register new user</a></li>
+            <li><a href="Calendar.aspx">Create new question</a></li>
+            <li><a href="Resources.aspx">Results</a></li>
         </ul>
     </aside>
     <div class="content"> 

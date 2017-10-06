@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AppraisalSystem.Web.Account {
+namespace AppraisalSystem.Web.Admin {
     
     
     public partial class Register {

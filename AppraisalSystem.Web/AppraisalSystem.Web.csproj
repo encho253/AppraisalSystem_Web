@@ -193,8 +193,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Login.aspx" />
-    <Content Include="Account\Register.aspx" />
     <Content Include="Admin\EvaluationTemplate.aspx" />
+    <Content Include="Admin\Register.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -282,13 +282,6 @@
     </Compile>
     <Compile Include="Account\Providers\CustomMembershipProvider.cs" />
     <Compile Include="Account\Providers\CustomRoleProvider.cs" />
-    <Compile Include="Account\Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\EvaluationTemplate.aspx.cs">
       <DependentUpon>EvaluationTemplate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -302,6 +295,13 @@
     </Compile>
     <Compile Include="Admin\MasterPageAdmin.master.designer.cs">
       <DependentUpon>MasterPageAdmin.master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
