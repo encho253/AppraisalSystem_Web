@@ -195,6 +195,7 @@
     <Content Include="About.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="AdminPage.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -242,6 +243,9 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Service References\AccountService\AccountService.disco" />
+    <None Include="Service References\AccountService\AccountService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\AccountService\configuration91.svcinfo" />
     <None Include="Service References\AccountService\configuration.svcinfo" />
     <None Include="Service References\AccountService\Reference.svcmap">
@@ -279,12 +283,20 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Providers\CustomMembershipProvider.cs" />
+    <Compile Include="Account\Providers\CustomRoleProvider.cs" />
     <Compile Include="Account\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage.aspx.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage.aspx.designer.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
