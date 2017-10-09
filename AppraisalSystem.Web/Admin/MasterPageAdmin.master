@@ -4,13 +4,13 @@
     CodeBehind="MasterPageAdmin.master.cs" Inherits="AppraisalSystem.Web.Admin.MasterPageAdmin" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-     <header id="users-area">Navigation</header>
+     <header id="users-area">Admin Area</header>
     <aside class="users-sidebar">
         <ul>
-            <li><a href="EvaluationTemplate.aspx">Create evaluation form</a></li>
-            <li><a href="Register.aspx">Register new user</a></li>
-            <li><a href="Calendar.aspx">Create new question</a></li>
-            <li><a href="Resources.aspx">Results</a></li>
+            <li><a href="EvaluationTemplate.aspx">New form</a></li>
+            <li><a href="Register.aspx">Create user</a></li>
+            <li><a href="Questions.aspx">Questions</a></li>
+            <li><a href="Results.aspx">Results</a></li>
         </ul>
     </aside>
     <div class="content"> 
