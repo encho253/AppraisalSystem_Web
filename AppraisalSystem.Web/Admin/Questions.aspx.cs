@@ -99,7 +99,11 @@ namespace AppraisalSystem.Web.Admin
         protected void Submit_Question(object sender, EventArgs e)
         {
             string competence = this.DropDownAddQuestion.SelectedValue;
-            string nerQuestion = this.txtAddQuestion.Text;
+            string content = this.txtAddQuestion.Text.Trim();
+
+            this.questionService.AddQuestion(content, competence);
+
+            Bind();
         }
     }
 }

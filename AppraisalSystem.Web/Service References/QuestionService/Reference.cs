@@ -111,6 +111,12 @@ namespace AppraisalSystem.Web.QuestionService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionWcfService/GetAll", ReplyAction="http://tempuri.org/IQuestionWcfService/GetAllResponse")]
         System.Threading.Tasks.Task<AppraisalSystem.Web.QuestionService.Question[]> GetAllAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionWcfService/AddQuestion", ReplyAction="http://tempuri.org/IQuestionWcfService/AddQuestionResponse")]
+        void AddQuestion(string questionContent, string competence);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionWcfService/AddQuestion", ReplyAction="http://tempuri.org/IQuestionWcfService/AddQuestionResponse")]
+        System.Threading.Tasks.Task AddQuestionAsync(string questionContent, string competence);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -162,6 +168,14 @@ namespace AppraisalSystem.Web.QuestionService {
         
         public System.Threading.Tasks.Task<AppraisalSystem.Web.QuestionService.Question[]> GetAllAsync() {
             return base.Channel.GetAllAsync();
+        }
+        
+        public void AddQuestion(string questionContent, string competence) {
+            base.Channel.AddQuestion(questionContent, competence);
+        }
+        
+        public System.Threading.Tasks.Task AddQuestionAsync(string questionContent, string competence) {
+            return base.Channel.AddQuestionAsync(questionContent, competence);
         }
     }
 }

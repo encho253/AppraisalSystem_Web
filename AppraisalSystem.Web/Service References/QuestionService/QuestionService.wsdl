@@ -25,6 +25,12 @@
   <wsdl:message name="IQuestionWcfService_GetAll_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllResponse" />
   </wsdl:message>
+  <wsdl:message name="IQuestionWcfService_AddQuestion_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddQuestion" />
+  </wsdl:message>
+  <wsdl:message name="IQuestionWcfService_AddQuestion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddQuestionResponse" />
+  </wsdl:message>
   <wsdl:portType name="IQuestionWcfService">
     <wsdl:operation name="GetQuestionsByCompetence">
       <wsdl:input wsaw:Action="http://tempuri.org/IQuestionWcfService/GetQuestionsByCompetence" message="tns:IQuestionWcfService_GetQuestionsByCompetence_InputMessage" />
@@ -37,6 +43,10 @@
     <wsdl:operation name="GetAll">
       <wsdl:input wsaw:Action="http://tempuri.org/IQuestionWcfService/GetAll" message="tns:IQuestionWcfService_GetAll_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IQuestionWcfService/GetAllResponse" message="tns:IQuestionWcfService_GetAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddQuestion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuestionWcfService/AddQuestion" message="tns:IQuestionWcfService_AddQuestion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuestionWcfService/AddQuestionResponse" message="tns:IQuestionWcfService_AddQuestion_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IQuestionWcfService" type="tns:IQuestionWcfService">
@@ -61,6 +71,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetAll">
       <soap:operation soapAction="http://tempuri.org/IQuestionWcfService/GetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddQuestion">
+      <soap:operation soapAction="http://tempuri.org/IQuestionWcfService/AddQuestion" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
