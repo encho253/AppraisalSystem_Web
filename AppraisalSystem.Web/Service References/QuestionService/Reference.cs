@@ -117,6 +117,12 @@ namespace AppraisalSystem.Web.QuestionService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionWcfService/AddQuestion", ReplyAction="http://tempuri.org/IQuestionWcfService/AddQuestionResponse")]
         System.Threading.Tasks.Task AddQuestionAsync(string questionContent, string competence);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionWcfService/Delete", ReplyAction="http://tempuri.org/IQuestionWcfService/DeleteResponse")]
+        void Delete(int questionId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionWcfService/Delete", ReplyAction="http://tempuri.org/IQuestionWcfService/DeleteResponse")]
+        System.Threading.Tasks.Task DeleteAsync(int questionId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -176,6 +182,14 @@ namespace AppraisalSystem.Web.QuestionService {
         
         public System.Threading.Tasks.Task AddQuestionAsync(string questionContent, string competence) {
             return base.Channel.AddQuestionAsync(questionContent, competence);
+        }
+        
+        public void Delete(int questionId) {
+            base.Channel.Delete(questionId);
+        }
+        
+        public System.Threading.Tasks.Task DeleteAsync(int questionId) {
+            return base.Channel.DeleteAsync(questionId);
         }
     }
 }

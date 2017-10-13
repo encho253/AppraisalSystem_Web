@@ -23,10 +23,6 @@ namespace AppraisalSystem.Web.Admin
         protected void Page_Load(object sender, EventArgs e)
         {
             this.competences = this.competenceService.GetAllCompetence();
-
-            this.DropDownAddQuestion.DataSource = competences;
-            this.DropDownAddQuestion.DataBind();
-
             this.DropDownListCompetences.SelectedIndexChanged += new EventHandler(this.Selection_Change);
 
             if (!IsPostBack)
@@ -34,6 +30,9 @@ namespace AppraisalSystem.Web.Admin
                 this.DropDownListCompetences.DataSource = competences;
                 this.DropDownListCompetences.DataBind();
                 this.DropDownListCompetences.Items.Add("Get all");
+
+                this.DropDownAddQuestion.DataSource = competences;
+                this.DropDownAddQuestion.DataBind();
 
                 Bind();
             }
@@ -69,7 +68,12 @@ namespace AppraisalSystem.Web.Admin
 
         protected void lnkDelete_Click(object sender, EventArgs e)
         {
-            //not implemented yet
+            RepeaterItem item = ((LinkButton)sender).Parent as RepeaterItem;
+            int questionId = int.Parse(((Label)item.FindControl("lblId")).Text.Trim());
+
+            this.questionService.Delete(questionId);
+
+            Bind();
         }
 
         protected void lnkSave_Click(object sender, EventArgs e)
@@ -102,6 +106,7 @@ namespace AppraisalSystem.Web.Admin
             string content = this.txtAddQuestion.Text.Trim();
 
             this.questionService.AddQuestion(content, competence);
+            this.txtAddQuestion.Text = null;
 
             Bind();
         }

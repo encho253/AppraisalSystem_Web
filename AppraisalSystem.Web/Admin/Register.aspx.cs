@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace AppraisalSystem.Web.Admin
 {
@@ -14,7 +9,7 @@ namespace AppraisalSystem.Web.Admin
 
         }
 
-        protected void Create_User(object sender, EventArgs e)
+        protected void Click(object sender, EventArgs e)
         {
 
         }

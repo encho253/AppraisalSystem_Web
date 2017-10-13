@@ -19,7 +19,7 @@
                     <tr>
                         <th>
                             <asp:Label ID="LabelSelectedValue" runat="server"
-                                Text="<%#: this.DropDownListCompetences.SelectedItem.Text %>" />
+                                Text="<%#: this.DropDownListCompetences.SelectedItem.Text %>"/>
                             competences
                         </th>
                     </tr>
