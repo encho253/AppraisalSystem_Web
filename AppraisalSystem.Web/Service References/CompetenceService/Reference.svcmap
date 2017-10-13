@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a8f80c02-387b-4187-a242-32b0f3f4c106" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:51360/CompetenceService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CompetenceService.xsd" MetadataType="Schema" ID="b08963c0-e1da-41af-b36e-e599e567c272" SourceId="1" SourceUrl="http://localhost:51360/CompetenceService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CompetenceService1.xsd" MetadataType="Schema" ID="5d5b6d12-066d-49a3-8488-49d309644ab2" SourceId="1" SourceUrl="http://localhost:51360/CompetenceService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CompetenceService.disco" MetadataType="Disco" ID="5bcb64ba-8f24-4e9e-ab26-21420540dd98" SourceId="1" SourceUrl="http://localhost:51360/CompetenceService.svc?disco" />
+    <MetadataFile FileName="CompetenceService2.xsd" MetadataType="Schema" ID="57edb484-a852-4d1a-8008-18e5604a6ea1" SourceId="1" SourceUrl="http://localhost:51360/CompetenceService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CompetenceService.wsdl" MetadataType="Wsdl" ID="2a90fbd4-1581-4bac-ba5e-7e64cc47c346" SourceId="1" SourceUrl="http://localhost:51360/CompetenceService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

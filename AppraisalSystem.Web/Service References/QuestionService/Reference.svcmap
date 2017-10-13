@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6a60d3eb-0124-443e-8c00-24046a27e1a9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:51360/QuestionService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="QuestionService.xsd" MetadataType="Schema" ID="d20e8f76-f2c0-4674-b3ae-b231e20862b6" SourceId="1" SourceUrl="http://localhost:51360/QuestionService.svc?xsd=xsd0" />
+    <MetadataFile FileName="QuestionService1.xsd" MetadataType="Schema" ID="6f7e5177-992c-42a1-99f4-d8762b6570f5" SourceId="1" SourceUrl="http://localhost:51360/QuestionService.svc?xsd=xsd2" />
+    <MetadataFile FileName="QuestionService2.xsd" MetadataType="Schema" ID="ace505d5-865e-4400-ab83-00409fea289c" SourceId="1" SourceUrl="http://localhost:51360/QuestionService.svc?xsd=xsd1" />
+    <MetadataFile FileName="QuestionService.disco" MetadataType="Disco" ID="6af7cf6b-1df3-410e-9850-9646ec7fcc80" SourceId="1" SourceUrl="http://localhost:51360/QuestionService.svc?disco" />
+    <MetadataFile FileName="QuestionService.wsdl" MetadataType="Wsdl" ID="83500ade-1459-43fe-b373-027067774b60" SourceId="1" SourceUrl="http://localhost:51360/QuestionService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

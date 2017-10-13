@@ -83,9 +83,8 @@ aside a {
     display: inline-block;
     width: 200px;
     height: 35px;
-    border: 1px solid #ff7d00;
     border-radius: 3px;
-    background-color: rgba(255, 106, 0, 0.40);
+    background-color: rgba(153, 235, 253, 1);
     background-image: url('Images/users.png');
     background-position: center;
     background-repeat: no-repeat;

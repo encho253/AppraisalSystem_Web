@@ -251,6 +251,33 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Service References\CompetenceService\CompetenceService.wsdl" />
+    <None Include="Service References\CompetenceService\CompetenceService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CompetenceService\CompetenceService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CompetenceService\CompetenceService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\QuestionService\AppraisalSystem.Web.QuestionService.Question.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\QuestionService\QuestionService.disco" />
+    <None Include="Service References\QuestionService\configuration91.svcinfo" />
+    <None Include="Service References\QuestionService\configuration.svcinfo" />
+    <None Include="Service References\QuestionService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CompetenceService\CompetenceService.disco" />
+    <None Include="Service References\CompetenceService\configuration91.svcinfo" />
+    <None Include="Service References\CompetenceService\configuration.svcinfo" />
+    <None Include="Service References\CompetenceService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -266,6 +293,16 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\AccountService\AccountService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuestionService\QuestionService.wsdl" />
+    <None Include="Service References\QuestionService\QuestionService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuestionService\QuestionService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\QuestionService\QuestionService2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web.Debug.config">
@@ -338,6 +375,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\CompetenceService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\QuestionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -369,6 +416,8 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\AccountService\" />
+    <WCFMetadataStorage Include="Service References\CompetenceService\" />
+    <WCFMetadataStorage Include="Service References\QuestionService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
