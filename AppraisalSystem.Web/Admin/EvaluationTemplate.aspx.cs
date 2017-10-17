@@ -1,90 +1,114 @@
-﻿using System;
-using System.Text;
-using System.Web.UI;
+﻿using AppraisalSystem.Web.CompetenceService;
+using AppraisalSystem.Web.QuestionService;
+using System;
+using System.Collections.Generic;
+using System.Web.UI.WebControls;
 
 namespace AppraisalSystem.Web.Admin
 {
     public partial class EvaluationTemplate : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        private IQuestionWcfService questionService;
+        private ICompetenceWcfService competenceService;
+        private string[] competences;
+        private IEnumerable<Question> questions;
+
+        public EvaluationTemplate()
         {
-            if (Page.IsPostBack)
-            {
-                // This is not the first load of the page,
-                // so we should skip the data binding
-                return;
-            }
-
-            // Bind the BulletedList
-            var urls = new[]
-            {
-                new { Text="Google", Url="http://www.google.com" },
-                new { Text="Bing!", Url="http://www.bing.com" },
-                new { Text="MSDN", Url="http://msdn.microsoft.com" }
-            };
-            this.BulletedListMenu.DataSource = urls;
-            this.BulletedListMenu.DataBind();
-
-            // Bind the ListBox
-            string[] towns = { "Sofia", "Plovdiv", "Varna", "Kaspichan" };
-            this.ListBoxTowns.DataSource = towns;
-            this.ListBoxTowns.DataBind();
-            this.ListBoxTowns.SelectedIndex = 2;
-
-            // Bind the DropDownList
-            string[] genders = { "Male", "Female", "Other" };
-            this.DropDownListGender.DataSource = genders;
-            this.DropDownListGender.DataBind();
-            this.DropDownListGender.SelectedIndex = 1;
-
-            // Bind the CheckBoxList
-            var food = new[]
-            {
-                new { ID=101, Text="Salad" },
-                new { ID=102, Text="Steak" },
-                new { ID=103, Text="Beer" },
-            };
-            this.CheckBoxListFood.DataSource = food;
-            this.CheckBoxListFood.DataBind();
-
-            // Bind the RadioButtonList
-            var paymentMethods = new[]
-            {
-                new { ID=1, Text="Cash" },
-                new { ID=2, Text="Credit card" }
-            };
-            this.RadioButtonListPayment.DataSource = paymentMethods;
-            this.RadioButtonListPayment.DataBind();
-            this.RadioButtonListPayment.SelectedIndex = 1;
+            this.questionService = new QuestionWcfServiceClient();
+            this.competenceService = new CompetenceWcfServiceClient();
+            this.questions = new List<Question>();
         }
 
-        protected void ButtonSubmit_Click(object sender, EventArgs e)
+        protected void Page_Load(object sender, EventArgs e)
         {
-            StringBuilder result = new StringBuilder();
-            string town = ListBoxTowns.SelectedValue;
-            result.AppendLine(
-                "Town: <b>" + Server.HtmlEncode(town) + "</b><br/>");
-            string gender = DropDownListGender.SelectedValue;
-            result.AppendLine(
-                "Gender: <b>" + Server.HtmlEncode(gender) + "</b><br/>");
-            for (int i = 0; i < CheckBoxListFood.Items.Count; i++)
+            this.competences = this.competenceService.GetAllCompetence();
+            this.DropDownListCompetences.SelectedIndexChanged += new EventHandler(this.Selection_Change);
+
+            if (!IsPostBack)
             {
-                if (CheckBoxListFood.Items[i].Selected)
-                {
-                    string food = CheckBoxListFood.Items[i].Text;
-                    string foodId = CheckBoxListFood.Items[i].Value;
-                    result.AppendLine(
-                        "Food: <b>" + Server.HtmlEncode(food) + "</b> " +
-                        "(ID=" + foodId + ") <br/>");
-                }
+                this.DropDownListCompetences.DataSource = competences;
+                this.DropDownListCompetences.DataBind();
+                this.DropDownListCompetences.Items.Add("Get all");
+
+                this.DropDownAddQuestion.DataSource = competences;
+                this.DropDownAddQuestion.DataBind();
+
+                Bind();
             }
-            string payment = RadioButtonListPayment.SelectedItem.Text;
-            string paymentId = RadioButtonListPayment.SelectedItem.Value;
-            result.AppendLine(
-                "Payment: <b>" + Server.HtmlEncode(payment) +
-                "</b> (ID=" + Server.HtmlEncode(paymentId) + ")<br/>");
-            this.ResultsRow.Visible = true;
-            this.LiteralResult.Text = result.ToString();
+        }
+
+        public void Selection_Change(Object sender, EventArgs e)
+        {
+            Bind();
+        }
+
+        private void ToggleElements(RepeaterItem item, bool isEdit)
+        {
+            //Edit
+            item.FindControl("lnkEdit").Visible = !isEdit;
+            item.FindControl("lblEdit").Visible = !isEdit;
+            item.FindControl("txtEdit").Visible = isEdit;
+
+            //Delete
+            item.FindControl("lnkDelete").Visible = !isEdit;
+
+            //Save
+            item.FindControl("lnkSave").Visible = isEdit;
+
+            //Cancel
+            item.FindControl("lnkCancel").Visible = isEdit;
+        }
+
+        protected void lnkEdit_Click(object sender, EventArgs e)
+        {
+            RepeaterItem item = (sender as LinkButton).Parent as RepeaterItem;
+            this.ToggleElements(item, true);
+        }
+
+        protected void lnkDelete_Click(object sender, EventArgs e)
+        {
+            RepeaterItem item = ((LinkButton)sender).Parent as RepeaterItem;
+            int questionId = int.Parse(((Label)item.FindControl("lblId")).Text.Trim());
+
+            this.questionService.Delete(questionId);
+
+            Bind();
+        }
+
+        protected void lnkSave_Click(object sender, EventArgs e)
+        {
+            RepeaterItem item = ((LinkButton)sender).Parent as RepeaterItem;
+            string questionContent = ((TextBox)item.FindControl("txtEdit")).Text.Trim();
+            int questionId = int.Parse(((Label)item.FindControl("lblId")).Text.Trim());
+
+            this.questionService.UpdateQuestion(questionId, questionContent);
+
+            Bind();
+        }
+
+        protected void lnkCancel_Click(object sender, EventArgs e)
+        {
+            RepeaterItem item = (sender as LinkButton).Parent as RepeaterItem;
+            this.ToggleElements(item, false);
+        }
+
+        protected void Bind()
+        {
+            this.questions = this.questionService.GetQuestionsByCompetence(this.DropDownListCompetences.SelectedValue);
+            this.dataTable.DataSource = questions;
+            this.dataTable.DataBind();
+        }
+
+        protected void Submit_Question(object sender, EventArgs e)
+        {
+            string competence = this.DropDownAddQuestion.SelectedValue;
+            string content = this.txtAddQuestion.Text.Trim();
+
+            this.questionService.AddQuestion(content, competence);
+            this.txtAddQuestion.Text = null;
+
+            Bind();
         }
     }
 }

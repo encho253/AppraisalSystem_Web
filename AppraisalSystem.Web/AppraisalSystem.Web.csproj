@@ -194,7 +194,6 @@
   <ItemGroup>
     <Content Include="Account\Login.aspx" />
     <Content Include="Admin\EvaluationTemplate.aspx" />
-    <Content Include="Admin\Questions.aspx" />
     <Content Include="Admin\Register.aspx" />
     <Content Include="Admin\Results.aspx" />
     <Content Include="Content\AdminNavigation.css" />
@@ -323,13 +322,6 @@
     </Compile>
     <Compile Include="Account\Providers\CustomMembershipProvider.cs" />
     <Compile Include="Account\Providers\CustomRoleProvider.cs" />
-    <Compile Include="Admin\EvaluationTemplate.aspx.cs">
-      <DependentUpon>EvaluationTemplate.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\EvaluationTemplate.aspx.designer.cs">
-      <DependentUpon>EvaluationTemplate.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin\MasterPageAdmin.master.cs">
       <DependentUpon>MasterPageAdmin.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -337,12 +329,12 @@
     <Compile Include="Admin\MasterPageAdmin.master.designer.cs">
       <DependentUpon>MasterPageAdmin.master</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Questions.aspx.cs">
-      <DependentUpon>Questions.aspx</DependentUpon>
+    <Compile Include="Admin\EvaluationTemplate.aspx.cs">
+      <DependentUpon>EvaluationTemplate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Questions.aspx.designer.cs">
-      <DependentUpon>Questions.aspx</DependentUpon>
+    <Compile Include="Admin\EvaluationTemplate.aspx.designer.cs">
+      <DependentUpon>EvaluationTemplate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>

@@ -9,7 +9,6 @@
         <ul>
             <li><a href="EvaluationTemplate.aspx">New form</a></li>
             <li><a href="Register.aspx">Create user</a></li>
-            <li><a href="Questions.aspx">Questions</a></li>
             <li><a href="Results.aspx">Results</a></li>
         </ul>
     </aside>
