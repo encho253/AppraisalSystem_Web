@@ -11,15 +11,17 @@
     </div>
     <div>
         <p>Select Competence</p>
-        <asp:DropDownList ID="DropDownListCompetences" runat="server" AutoPostBack="True"></asp:DropDownList>
-        <p><br /></p>
+        <asp:DropDownList ID="DropDownListCompetences" class="btn btn-default dropdown-toggle" runat="server" AutoPostBack="True"></asp:DropDownList>
+        <p>
+            <br />
+        </p>
         <asp:Repeater ID="dataTable" runat="server">
             <HeaderTemplate>
                 <table class="table table-bordered">
                     <tr>
                         <th>
                             <asp:Label ID="LabelSelectedValue" runat="server"
-                                Text="<%#: this.DropDownListCompetences.SelectedItem.Text %>"/>
+                                Text="<%#: this.DropDownListCompetences.SelectedItem.Text %>" />
                             competences
                         </th>
                     </tr>
@@ -45,8 +47,8 @@
         </asp:Repeater>
 
         <h4>Add Question</h4>
-        <asp:DropDownList ID="DropDownAddQuestion" runat="server"></asp:DropDownList>
-        <asp:TextBox ID="txtAddQuestion" runat="server" Width="100%" />
-        <asp:Button ID="SubmitQuestion" Text="Add" OnClick="Submit_Question" runat="server" />
+        <asp:DropDownList ID="DropDownAddQuestion" class="btn btn-default dropdown-toggle addQuestion" runat="server"></asp:DropDownList>
+        <asp:TextBox ID="txtAddQuestion" class="form-control input-sm addQuestion" runat="server" />
+        <asp:Button ID="SubmitQuestion" class="btn btn-success addQuestion" Text="Add" OnClick="Submit_Question" runat="server" />
     </div>
 </asp:Content>

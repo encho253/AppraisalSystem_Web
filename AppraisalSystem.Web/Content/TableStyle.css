@@ -1,6 +1,4 @@
-﻿.table-bordered {
-    width: 750px;
-}
-
-.control-label {
+﻿.addQuestion {
+    display: inline-block;
+    margin: 1px;
 }
