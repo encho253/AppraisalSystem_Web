@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d6386d08-8a98-4d49-b11d-84fa268a6165" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:51360/PositionService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PositionService.disco" MetadataType="Disco" ID="d0abd345-75bf-4f52-a405-a30dd24b39e4" SourceId="1" SourceUrl="http://localhost:51360/PositionService.svc?disco" />
+    <MetadataFile FileName="PositionService.wsdl" MetadataType="Wsdl" ID="f1dcbd48-a703-41a8-be4f-fafa7683f2ff" SourceId="1" SourceUrl="http://localhost:51360/PositionService.svc?wsdl" />
+    <MetadataFile FileName="PositionService.xsd" MetadataType="Schema" ID="56b1f594-4519-4735-a9ea-a7f90475a037" SourceId="1" SourceUrl="http://localhost:51360/PositionService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PositionService1.xsd" MetadataType="Schema" ID="f52b24dc-1bbd-452f-b4cf-f34ce9c9c76c" SourceId="1" SourceUrl="http://localhost:51360/PositionService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PositionService2.xsd" MetadataType="Schema" ID="41ddcd77-8319-4ec2-8980-226b23cec307" SourceId="1" SourceUrl="http://localhost:51360/PositionService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

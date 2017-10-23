@@ -261,9 +261,26 @@
     <None Include="Service References\CompetenceService\CompetenceService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\PositionService\PositionService.disco" />
+    <None Include="Service References\PositionService\configuration91.svcinfo" />
+    <None Include="Service References\PositionService\configuration.svcinfo" />
+    <None Include="Service References\PositionService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Service References\QuestionService\AppraisalSystem.Web.QuestionService.Question.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Service References\PositionService\PositionService.wsdl" />
+    <None Include="Service References\PositionService\PositionService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PositionService\PositionService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PositionService\PositionService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\QuestionService\QuestionService.disco" />
     <None Include="Service References\QuestionService\configuration91.svcinfo" />
     <None Include="Service References\QuestionService\configuration.svcinfo" />
@@ -373,6 +390,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\PositionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\QuestionService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -410,6 +432,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\AccountService\" />
     <WCFMetadataStorage Include="Service References\CompetenceService\" />
+    <WCFMetadataStorage Include="Service References\PositionService\" />
     <WCFMetadataStorage Include="Service References\QuestionService\" />
   </ItemGroup>
   <PropertyGroup>

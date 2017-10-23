@@ -15,6 +15,21 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetQuestionByPositionAndCompetence">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="position" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="competence" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetQuestionByPositionAndCompetenceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DB" minOccurs="0" name="GetQuestionByPositionAndCompetenceResult" nillable="true" type="q2:ArrayOfQuestion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="UpdateQuestion">
     <xs:complexType>
       <xs:sequence>
@@ -36,7 +51,7 @@
   <xs:element name="GetAllResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DB" minOccurs="0" name="GetAllResult" nillable="true" type="q2:ArrayOfQuestion" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DB" minOccurs="0" name="GetAllResult" nillable="true" type="q3:ArrayOfQuestion" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -44,6 +59,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="questionContent" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="position" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="competence" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>

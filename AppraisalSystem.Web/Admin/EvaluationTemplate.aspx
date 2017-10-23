@@ -7,6 +7,11 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderUsersArea" runat="server">
     <div>
+        <h4>Select Position</h4>
+    </div>
+    <asp:DropDownList ID="DropDownPositions" class="btn btn-default dropdown-toggle" runat="server" AutoPostBack="True"></asp:DropDownList>
+
+    <div>
         <h4>Questions</h4>
     </div>
     <div>
@@ -17,12 +22,14 @@
         </p>
         <asp:Repeater ID="dataTable" runat="server">
             <HeaderTemplate>
-                <table class="table table-bordered">
+                <table class="table table-hover">
                     <tr>
-                        <th>
+                        <th class="thead-inverse">
                             <asp:Label ID="LabelSelectedValue" runat="server"
                                 Text="<%#: this.DropDownListCompetences.SelectedItem.Text %>" />
                             competences
+                        </th>
+                        <th class="thead-inverse">Options
                         </th>
                     </tr>
             </HeaderTemplate>
@@ -31,7 +38,7 @@
                     <td>
                         <asp:Label ID="lblEdit" runat="server" Text='<%#Eval("Content")%>'></asp:Label>
                         <asp:Label ID="lblId" runat="server" Text='<%#Eval("ID")%>' Visible="false"></asp:Label>
-                        <asp:TextBox ID="txtEdit" runat="server" Width="100%" Text='<%# Eval("Content") %>' Visible="false" />
+                        <asp:TextBox ID="txtEdit" runat="server" CssClass="text-field" TextMode="MultiLine" Rows="2" Width="100%" Text='<%# Eval("Content") %>' Visible="false" />
                     </td>
                     <td>
                         <asp:LinkButton ID="lnkEdit" class="btn btn-primary" Text="Edit" runat="server" OnClick="lnkEdit_Click" />
@@ -42,12 +49,9 @@
                 </tr>
             </ItemTemplate>
             <FooterTemplate>
-                </table>
+                </table>                
             </FooterTemplate>
         </asp:Repeater>
-
-        <h4>Add Question</h4>
-        <asp:DropDownList ID="DropDownAddQuestion" class="btn btn-default dropdown-toggle addQuestion" runat="server"></asp:DropDownList>
         <asp:TextBox ID="txtAddQuestion" class="form-control input-sm addQuestion" runat="server" />
         <asp:Button ID="SubmitQuestion" class="btn btn-success addQuestion" Text="Add" OnClick="Submit_Question" runat="server" />
     </div>

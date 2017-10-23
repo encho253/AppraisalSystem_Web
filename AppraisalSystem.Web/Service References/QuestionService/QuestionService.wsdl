@@ -13,6 +13,12 @@
   <wsdl:message name="IQuestionWcfService_GetQuestionsByCompetence_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetQuestionsByCompetenceResponse" />
   </wsdl:message>
+  <wsdl:message name="IQuestionWcfService_GetQuestionByPositionAndCompetence_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestionByPositionAndCompetence" />
+  </wsdl:message>
+  <wsdl:message name="IQuestionWcfService_GetQuestionByPositionAndCompetence_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQuestionByPositionAndCompetenceResponse" />
+  </wsdl:message>
   <wsdl:message name="IQuestionWcfService_UpdateQuestion_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateQuestion" />
   </wsdl:message>
@@ -42,6 +48,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IQuestionWcfService/GetQuestionsByCompetence" message="tns:IQuestionWcfService_GetQuestionsByCompetence_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IQuestionWcfService/GetQuestionsByCompetenceResponse" message="tns:IQuestionWcfService_GetQuestionsByCompetence_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetQuestionByPositionAndCompetence">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuestionWcfService/GetQuestionByPositionAndCompetence" message="tns:IQuestionWcfService_GetQuestionByPositionAndCompetence_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuestionWcfService/GetQuestionByPositionAndCompetenceResponse" message="tns:IQuestionWcfService_GetQuestionByPositionAndCompetence_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="UpdateQuestion">
       <wsdl:input wsaw:Action="http://tempuri.org/IQuestionWcfService/UpdateQuestion" message="tns:IQuestionWcfService_UpdateQuestion_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IQuestionWcfService/UpdateQuestionResponse" message="tns:IQuestionWcfService_UpdateQuestion_OutputMessage" />
@@ -63,6 +73,15 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetQuestionsByCompetence">
       <soap:operation soapAction="http://tempuri.org/IQuestionWcfService/GetQuestionsByCompetence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetQuestionByPositionAndCompetence">
+      <soap:operation soapAction="http://tempuri.org/IQuestionWcfService/GetQuestionByPositionAndCompetence" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
