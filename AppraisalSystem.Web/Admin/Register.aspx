@@ -26,7 +26,7 @@
         <asp:Label runat="server" AssociatedControlID="LastName">Last Name</asp:Label>
         <div class="form-group">
             <div class="col-md-12">
-                <asp:TextBox runat="server" ID="LastName"  CssClass="form-control" TextMode="SingleLine"/>
+                <asp:TextBox runat="server" ID="LastName" CssClass="form-control" TextMode="SingleLine" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="LastName"
                     CssClass="text-danger" ErrorMessage="The last name field is required." />
             </div>
@@ -50,14 +50,6 @@
             </div>
         </div>
 
-        <asp:Label runat="server" AssociatedControlID="Position">Position</asp:Label>
-        <div class="form-group">
-            <div class="col-md-12">
-                <asp:TextBox runat="server" ID="Position" CssClass="form-control" TextMode="SingleLine" />
-                <asp:RequiredFieldValidator runat="server" ControlToValidate="Position"
-                    CssClass="text-danger" ErrorMessage="The position field is required." />
-            </div>
-        </div>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-12">
                 <asp:Button runat="server" OnClick="Click" Text="Register" CssClass="btn btn-default" />

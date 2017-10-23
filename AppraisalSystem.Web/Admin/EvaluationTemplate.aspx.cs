@@ -114,7 +114,7 @@ namespace AppraisalSystem.Web.Admin
             string competence = this.DropDownListCompetences.SelectedValue;
             string content = this.txtAddQuestion.Text;
 
-            this.questionService.AddQuestion(content, competence);
+            this.questionService.AddQuestion(content, position, competence);
             this.txtAddQuestion.Text = null;
 
             Bind();

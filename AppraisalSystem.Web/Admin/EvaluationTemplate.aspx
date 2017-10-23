@@ -7,13 +7,16 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderUsersArea" runat="server">
     <div>
-        <h4>Select Position</h4>
+        <h4>Questions</h4>
+        <p>Select Position</p>
     </div>
+
     <asp:DropDownList ID="DropDownPositions" class="btn btn-default dropdown-toggle" runat="server" AutoPostBack="True"></asp:DropDownList>
 
-    <div>
-        <h4>Questions</h4>
-    </div>
+    <p>
+        <br />
+    </p>
+
     <div>
         <p>Select Competence</p>
         <asp:DropDownList ID="DropDownListCompetences" class="btn btn-default dropdown-toggle" runat="server" AutoPostBack="True"></asp:DropDownList>
@@ -52,7 +55,7 @@
                 </table>                
             </FooterTemplate>
         </asp:Repeater>
-        <asp:TextBox ID="txtAddQuestion" class="form-control input-sm addQuestion" runat="server" />
+        <asp:TextBox ID="txtAddQuestion" CssClass="text-field" TextMode="MultiLine" Rows="2" Width="100%" class="form-control input-sm addQuestion" runat="server" />
         <asp:Button ID="SubmitQuestion" class="btn btn-success addQuestion" Text="Add" OnClick="Submit_Question" runat="server" />
     </div>
 </asp:Content>
