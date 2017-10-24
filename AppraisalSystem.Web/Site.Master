@@ -1,6 +1,6 @@
 ﻿<%@ Master Language="C#"
-     AutoEventWireup="true" 
-    CodeBehind="Site.master.cs" 
+    AutoEventWireup="true"
+    CodeBehind="Site.master.cs"
     Inherits="AppraisalSystem.Web.SiteMaster" %>
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="Content/AdminNavigation.css" rel="stylesheet" />
     <link href="Content/TableStyle.css" rel="stylesheet" />
@@ -53,7 +53,7 @@
                     <a class="navbar-brand" runat="server" href="~/">Appraisal System</a>
                 </div>
                 <div class="navbar-collapse collapse">
-                 <%--   <ul class="nav navbar-nav">
+                    <%--   <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>

@@ -193,6 +193,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Login.aspx" />
+    <Content Include="Admin\Evaluation.aspx" />
     <Content Include="Admin\EvaluationTemplate.aspx" />
     <Content Include="Admin\Register.aspx" />
     <Content Include="Admin\Results.aspx" />
@@ -215,6 +216,7 @@
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\CustomJS.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
@@ -339,6 +341,13 @@
     </Compile>
     <Compile Include="Account\Providers\CustomMembershipProvider.cs" />
     <Compile Include="Account\Providers\CustomRoleProvider.cs" />
+    <Compile Include="Admin\Evaluation.aspx.cs">
+      <DependentUpon>Evaluation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Evaluation.aspx.designer.cs">
+      <DependentUpon>Evaluation.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\MasterPageAdmin.master.cs">
       <DependentUpon>MasterPageAdmin.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

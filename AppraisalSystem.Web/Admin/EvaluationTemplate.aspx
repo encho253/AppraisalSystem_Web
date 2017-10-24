@@ -8,18 +8,18 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderUsersArea" runat="server">
     <div>
         <h4>Questions</h4>
-        <p>Select Position</p>
     </div>
 
-    <asp:DropDownList ID="DropDownPositions" class="btn btn-default dropdown-toggle" runat="server" AutoPostBack="True"></asp:DropDownList>
-
-    <p>
-        <br />
-    </p>
-
-    <div>
+    <div class="inlineEl">
+        <p>Select Position</p>
+        <asp:DropDownList ID="DropDownPositions" class="btn btn-default dropdown-toggle" runat="server" AutoPostBack="True"></asp:DropDownList>
+    </div>
+    <div class="inlineEl">
         <p>Select Competence</p>
         <asp:DropDownList ID="DropDownListCompetences" class="btn btn-default dropdown-toggle" runat="server" AutoPostBack="True"></asp:DropDownList>
+    </div>
+
+    <div>
         <p>
             <br />
         </p>
@@ -56,6 +56,6 @@
             </FooterTemplate>
         </asp:Repeater>
         <asp:TextBox ID="txtAddQuestion" CssClass="text-field" TextMode="MultiLine" Rows="2" Width="100%" class="form-control input-sm addQuestion" runat="server" />
-        <asp:Button ID="SubmitQuestion" class="btn btn-success addQuestion" Text="Add" OnClick="Submit_Question" runat="server" />
+        <asp:Button ID="SubmitQuestion" class="btn btn-success addQuestion" Text="Add Question" OnClick="Submit_Question" runat="server" />
     </div>
 </asp:Content>

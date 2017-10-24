@@ -22,10 +22,10 @@ namespace AppraisalSystem.Web.AccountService {
         System.Threading.Tasks.Task<bool> ValidateUserAsync(string email, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountWcfService/CreateUser", ReplyAction="http://tempuri.org/IAccountWcfService/CreateUserResponse")]
-        void CreateUser(int id, string firstName, string lastName, string password, string email, int roleId);
+        void CreateUser(string firstName, string lastName, string password, string email);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountWcfService/CreateUser", ReplyAction="http://tempuri.org/IAccountWcfService/CreateUserResponse")]
-        System.Threading.Tasks.Task CreateUserAsync(int id, string firstName, string lastName, string password, string email, int roleId);
+        System.Threading.Tasks.Task CreateUserAsync(string firstName, string lastName, string password, string email);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccountWcfService/GetRolesForUser", ReplyAction="http://tempuri.org/IAccountWcfService/GetRolesForUserResponse")]
         string[] GetRolesForUser(string userName);
@@ -69,12 +69,12 @@ namespace AppraisalSystem.Web.AccountService {
             return base.Channel.ValidateUserAsync(email, password);
         }
         
-        public void CreateUser(int id, string firstName, string lastName, string password, string email, int roleId) {
-            base.Channel.CreateUser(id, firstName, lastName, password, email, roleId);
+        public void CreateUser(string firstName, string lastName, string password, string email) {
+            base.Channel.CreateUser(firstName, lastName, password, email);
         }
         
-        public System.Threading.Tasks.Task CreateUserAsync(int id, string firstName, string lastName, string password, string email, int roleId) {
-            return base.Channel.CreateUserAsync(id, firstName, lastName, password, email, roleId);
+        public System.Threading.Tasks.Task CreateUserAsync(string firstName, string lastName, string password, string email) {
+            return base.Channel.CreateUserAsync(firstName, lastName, password, email);
         }
         
         public string[] GetRolesForUser(string userName) {

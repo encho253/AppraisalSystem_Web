@@ -1,0 +1,14 @@
+﻿
+$(document).ready(function () {
+    $("myselect").searchable({
+        maxListSize: 200, // if list size are less than maxListSize, show them all
+        maxMultiMatch: 300, // how many matching entries should be displayed
+        exactMatch: false, // Exact matching on search
+        wildcards: true, // Support for wildcard characters (*, ?)
+        ignoreCase: true, // Ignore case sensitivity
+        latency: 200, // how many millis to wait until starting search
+        warnMultiMatch: 'top {0} matches ...',
+        warnNoMatch: 'no matches ...',
+        zIndex: 'auto'
+    });
+});

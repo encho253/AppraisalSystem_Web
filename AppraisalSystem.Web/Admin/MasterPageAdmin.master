@@ -1,13 +1,15 @@
 ﻿<%@ Master Language="C#" 
     MasterPageFile="~/Site.Master"
     AutoEventWireup="true" 
-    CodeBehind="MasterPageAdmin.master.cs" Inherits="AppraisalSystem.Web.Admin.MasterPageAdmin" %>
+    CodeBehind="MasterPageAdmin.master.cs" 
+    Inherits="AppraisalSystem.Web.Admin.MasterPageAdmin" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
      <header id="users-area">Admin Area</header>
     <aside class="users-sidebar">
         <ul>
-            <li><a href="EvaluationTemplate.aspx">New form</a></li>
+             <li><a href="Evaluation.aspx">New form</a></li>
+            <li><a href="EvaluationTemplate.aspx">Questions</a></li>
             <li><a href="Register.aspx">Create user</a></li>
             <li><a href="Results.aspx">Results</a></li>
         </ul>

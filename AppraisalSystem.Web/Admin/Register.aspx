@@ -52,7 +52,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-12">
-                <asp:Button runat="server" OnClick="Click" Text="Register" CssClass="btn btn-default" />
+                <asp:Button runat="server" OnClick="Register_Submit" Text="Register" CssClass="btn btn-default" />
             </div>
         </div>
     </div>
