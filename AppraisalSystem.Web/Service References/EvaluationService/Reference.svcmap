@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dd270edc-edc7-48de-878b-6337ad45bf77" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:51360/EvaluationService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EvaluationService.wsdl" MetadataType="Wsdl" ID="f269212b-505e-4ccc-a736-729a2d78bb3a" SourceId="1" SourceUrl="http://localhost:51360/EvaluationService.svc?wsdl" />
+    <MetadataFile FileName="EvaluationService.xsd" MetadataType="Schema" ID="7bae0510-71ca-4f96-b73e-4219c6c0121f" SourceId="1" SourceUrl="http://localhost:51360/EvaluationService.svc?xsd=xsd0" />
+    <MetadataFile FileName="EvaluationService1.xsd" MetadataType="Schema" ID="519bbd66-8ad7-4e3b-aeca-b7947b03ecca" SourceId="1" SourceUrl="http://localhost:51360/EvaluationService.svc?xsd=xsd1" />
+    <MetadataFile FileName="EvaluationService.disco" MetadataType="Disco" ID="02b9b503-5e45-4261-b240-1b4dc173b332" SourceId="1" SourceUrl="http://localhost:51360/EvaluationService.svc?disco" />
+    <MetadataFile FileName="EvaluationService2.xsd" MetadataType="Schema" ID="6f317751-e090-4122-93ad-a094e9866bea" SourceId="1" SourceUrl="http://localhost:51360/EvaluationService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

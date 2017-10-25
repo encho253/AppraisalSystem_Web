@@ -247,6 +247,12 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Service References\AccountService\AccountService.disco" />
+    <None Include="Service References\AccountService\AccountService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\AccountService\AppraisalSystem.Web.AccountService.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\AccountService\configuration91.svcinfo" />
     <None Include="Service References\AccountService\configuration.svcinfo" />
     <None Include="Service References\AccountService\Reference.svcmap">
@@ -263,10 +269,30 @@
     <None Include="Service References\CompetenceService\CompetenceService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Service References\EvaluationService\AppraisalSystem.Web.EvaluationService.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\EvaluationService\EvaluationService.wsdl" />
+    <None Include="Service References\EvaluationService\EvaluationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EvaluationService\EvaluationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EvaluationService\EvaluationService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\PositionService\PositionService.disco" />
     <None Include="Service References\PositionService\configuration91.svcinfo" />
     <None Include="Service References\PositionService\configuration.svcinfo" />
     <None Include="Service References\PositionService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\EvaluationService\EvaluationService.disco" />
+    <None Include="Service References\EvaluationService\configuration91.svcinfo" />
+    <None Include="Service References\EvaluationService\configuration.svcinfo" />
+    <None Include="Service References\EvaluationService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -399,6 +425,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\EvaluationService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\PositionService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -441,6 +472,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\AccountService\" />
     <WCFMetadataStorage Include="Service References\CompetenceService\" />
+    <WCFMetadataStorage Include="Service References\EvaluationService\" />
     <WCFMetadataStorage Include="Service References\PositionService\" />
     <WCFMetadataStorage Include="Service References\QuestionService\" />
   </ItemGroup>
