@@ -1,7 +1,6 @@
 ﻿using AppraisalSystem.Web.AccountService;
 using AppraisalSystem.Web.EvaluationService;
 using System;
-using System.Collections.Generic;
 
 namespace AppraisalSystem.Web.Admin
 {
@@ -30,7 +29,7 @@ namespace AppraisalSystem.Web.Admin
 
         protected void AddEvaluator_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
