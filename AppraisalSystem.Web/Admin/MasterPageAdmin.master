@@ -1,20 +1,22 @@
-﻿<%@ Master Language="C#" 
+﻿<%@ Master Language="C#"
     MasterPageFile="~/Site.Master"
-    AutoEventWireup="true" 
-    CodeBehind="MasterPageAdmin.master.cs" 
+    AutoEventWireup="true"
+    CodeBehind="MasterPageAdmin.master.cs"
     Inherits="AppraisalSystem.Web.Admin.MasterPageAdmin" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-     <header id="users-area">Admin Area</header>
+    <header id="users-area">Admin Area</header>
     <aside class="users-sidebar">
         <ul>
-             <li><a href="Evaluation.aspx">New form</a></li>
+            <li><a href="Evaluation.aspx">New form</a></li>
             <li><a href="EvaluationTemplate.aspx">Questions</a></li>
+            <li><a href="Positions.aspx">Positions</a></li>
+            <li><a href="Competences.aspx">Competences</a></li>
             <li><a href="Register.aspx">Create user</a></li>
             <li><a href="Results.aspx">Results</a></li>
         </ul>
     </aside>
-    <div class="content"> 
+    <div class="content">
         <asp:ContentPlaceHolder ID="ContentPlaceHolderUsersArea" runat="server" />
     </div>
 </asp:Content>

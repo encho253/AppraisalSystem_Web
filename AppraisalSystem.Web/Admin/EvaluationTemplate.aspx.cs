@@ -13,14 +13,14 @@ namespace AppraisalSystem.Web.Admin
         private ICompetenceWcfService competenceService;
         private IPositionWcfService positionService;
         private string[] competences;
-        private IEnumerable<Question> questions;
+        private IEnumerable<QuestionService.Question> questions;
 
         public EvaluationTemplate()
         {
             this.questionService = new QuestionWcfServiceClient();
             this.competenceService = new CompetenceWcfServiceClient();
             this.positionService = new PositionWcfServiceClient();
-            this.questions = new List<Question>();
+            this.questions = new List<QuestionService.Question>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -31,7 +31,7 @@ namespace AppraisalSystem.Web.Admin
 
             if (!IsPostBack)
             {
-                this.DropDownPositions.DataSource = this.positionService.GetAll();
+                this.DropDownPositions.DataSource = this.positionService.GetAllPositionsByName();
                 this.DropDownPositions.DataBind();
 
                 this.DropDownListCompetences.DataSource = competences;

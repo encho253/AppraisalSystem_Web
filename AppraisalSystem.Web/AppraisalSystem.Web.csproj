@@ -193,8 +193,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Login.aspx" />
+    <Content Include="Admin\Competences.aspx" />
     <Content Include="Admin\Evaluation.aspx" />
     <Content Include="Admin\EvaluationTemplate.aspx" />
+    <Content Include="Admin\Positions.aspx" />
     <Content Include="Admin\Register.aspx" />
     <Content Include="Admin\Results.aspx" />
     <Content Include="Content\AdminNavigation.css" />
@@ -282,9 +284,15 @@
     <None Include="Service References\EvaluationService\EvaluationService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Service References\PositionService\AppraisalSystem.Web.PositionService.Position.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\PositionService\PositionService.disco" />
     <None Include="Service References\PositionService\configuration91.svcinfo" />
     <None Include="Service References\PositionService\configuration.svcinfo" />
+    <None Include="Service References\PositionService\PositionService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\PositionService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -367,6 +375,13 @@
     </Compile>
     <Compile Include="Account\Providers\CustomMembershipProvider.cs" />
     <Compile Include="Account\Providers\CustomRoleProvider.cs" />
+    <Compile Include="Admin\Competences.aspx.cs">
+      <DependentUpon>Competences.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Competences.aspx.designer.cs">
+      <DependentUpon>Competences.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Evaluation.aspx.cs">
       <DependentUpon>Evaluation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -387,6 +402,13 @@
     </Compile>
     <Compile Include="Admin\EvaluationTemplate.aspx.designer.cs">
       <DependentUpon>EvaluationTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Positions.aspx.cs">
+      <DependentUpon>Positions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Positions.aspx.designer.cs">
+      <DependentUpon>Positions.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
