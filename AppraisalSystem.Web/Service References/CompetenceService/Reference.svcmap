@@ -22,10 +22,11 @@
     <MetadataSource Address="http://localhost:51360/CompetenceService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
+    <MetadataFile FileName="CompetenceService2.xsd" MetadataType="Schema" ID="57edb484-a852-4d1a-8008-18e5604a6ea1" SourceId="1" SourceUrl="http://localhost:51360/CompetenceService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CompetenceService3.xsd" MetadataType="Schema" ID="0f289327-9a2b-4e73-b471-da80243c0c2e" SourceId="1" SourceUrl="http://localhost:51360/CompetenceService.svc?xsd=xsd3" />
     <MetadataFile FileName="CompetenceService.xsd" MetadataType="Schema" ID="b08963c0-e1da-41af-b36e-e599e567c272" SourceId="1" SourceUrl="http://localhost:51360/CompetenceService.svc?xsd=xsd0" />
     <MetadataFile FileName="CompetenceService1.xsd" MetadataType="Schema" ID="5d5b6d12-066d-49a3-8488-49d309644ab2" SourceId="1" SourceUrl="http://localhost:51360/CompetenceService.svc?xsd=xsd1" />
     <MetadataFile FileName="CompetenceService.disco" MetadataType="Disco" ID="5bcb64ba-8f24-4e9e-ab26-21420540dd98" SourceId="1" SourceUrl="http://localhost:51360/CompetenceService.svc?disco" />
-    <MetadataFile FileName="CompetenceService2.xsd" MetadataType="Schema" ID="57edb484-a852-4d1a-8008-18e5604a6ea1" SourceId="1" SourceUrl="http://localhost:51360/CompetenceService.svc?xsd=xsd2" />
     <MetadataFile FileName="CompetenceService.wsdl" MetadataType="Wsdl" ID="2a90fbd4-1581-4bac-ba5e-7e64cc47c346" SourceId="1" SourceUrl="http://localhost:51360/CompetenceService.svc?wsdl" />
   </Metadata>
   <Extensions>

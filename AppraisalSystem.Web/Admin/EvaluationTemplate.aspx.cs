@@ -12,7 +12,6 @@ namespace AppraisalSystem.Web.Admin
         private IQuestionWcfService questionService;
         private ICompetenceWcfService competenceService;
         private IPositionWcfService positionService;
-        private string[] competences;
         private IEnumerable<QuestionService.Question> questions;
 
         public EvaluationTemplate()
@@ -25,8 +24,7 @@ namespace AppraisalSystem.Web.Admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.competences = this.competenceService.GetAllCompetence();
-            this.DropDownPositions.SelectedIndexChanged += new EventHandler(this.Selection_Change);
+            this.DropDownPositions.SelectedIndexChanged += new EventHandler(this.Selection_Change1);
             this.DropDownListCompetences.SelectedIndexChanged += new EventHandler(this.Selection_Change);
 
             if (!IsPostBack)
@@ -34,12 +32,9 @@ namespace AppraisalSystem.Web.Admin
                 this.DropDownPositions.DataSource = this.positionService.GetAllPositionsByName();
                 this.DropDownPositions.DataBind();
 
-                this.DropDownListCompetences.DataSource = competences;
+                var pppp = this.competenceService.GetAllCompetencesNameByPosition(this.DropDownPositions.Text.Trim()); 
+                this.DropDownListCompetences.DataSource = this.competenceService.GetAllCompetencesNameByPosition(this.DropDownPositions.Text.Trim());
                 this.DropDownListCompetences.DataBind();
-                this.DropDownListCompetences.Items.Add("Get all");
-
-                //this.DropDownAddQuestion.DataSource = competences;
-                //this.DropDownAddQuestion.DataBind();
 
                 Bind();
             }
@@ -50,6 +45,13 @@ namespace AppraisalSystem.Web.Admin
             this.questions = this.questionService.GetQuestionByPositionAndCompetence(this.DropDownPositions.SelectedValue, this.DropDownListCompetences.SelectedValue);
             this.dataTable.DataSource = questions;
             this.dataTable.DataBind();
+        }
+
+        public void Selection_Change1(Object sender, EventArgs e)
+        {
+            this.DropDownListCompetences.DataSource = this.competenceService.GetAllCompetencesNameByPosition(this.DropDownPositions.Text.Trim());
+            this.DropDownListCompetences.DataBind();
+            Bind();
         }
 
         public void Selection_Change(Object sender, EventArgs e)

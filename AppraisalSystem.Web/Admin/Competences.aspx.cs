@@ -1,48 +1,87 @@
 ﻿using AppraisalSystem.Web.CompetenceService;
 using AppraisalSystem.Web.PositionService;
-using AppraisalSystem.Web.QuestionService;
 using System;
 using System.Collections.Generic;
+using System.Web.UI.WebControls;
 
 namespace AppraisalSystem.Web.Admin
 {
     public partial class Competences : System.Web.UI.Page
     {
-        private IQuestionWcfService questionService;
         private ICompetenceWcfService competenceService;
         private IPositionWcfService positionService;
-        private IEnumerable<QuestionService.Question> questions;
 
         public Competences()
         {
+            this.competenceService = new CompetenceWcfServiceClient();
             this.positionService = new PositionWcfServiceClient();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //this.DropDownPositions.SelectedIndexChanged += new EventHandler(this.Selection_Change);
-
-            //if (!IsPostBack)
-            //{
-            //    this.DropDownPositions.DataSource = this.positionService.GetAll();
-            //    this.DropDownPositions.DataBind();
-
-            //    this.DropDownListCompetences.DataSource = competences;
-            //    this.DropDownListCompetences.DataBind();
-            //    this.DropDownListCompetences.Items.Add("Get all");
-
-            //    //this.DropDownAddQuestion.DataSource = competences;
-            //    //this.DropDownAddQuestion.DataBind();
-
-            //    Bind();
-            //}
+            if (!IsPostBack)
+            {
+                Bind();
+            }
         }
 
-        protected void Bind()
+        public void Bind()
         {
-            //this.questions = this.questionService.GetQuestionByPositionAndCompetence(this.DropDownPositions.SelectedValue, this.DropDownListCompetences.SelectedValue);
-            //this.dataTable.DataSource = questions;
-            //this.dataTable.DataBind();
+            IEnumerable<Competence> competences = competenceService.GetAllCompetences();
+            this.dataTable.DataSource = competences;
+            this.dataTable.DataBind();
+        }
+
+        public void Selection_Change(Object sender, EventArgs e)
+        {
+            Bind();
+        }
+
+        private void ToggleElements(RepeaterItem item, bool isEdit)
+        {
+            //Edit
+            item.FindControl("lnkEdit").Visible = !isEdit;
+            item.FindControl("lblEdit").Visible = !isEdit;
+            item.FindControl("txtEdit").Visible = isEdit;
+
+            //Delete
+            item.FindControl("lnkDelete").Visible = !isEdit;
+
+            //Save
+            item.FindControl("lnkSave").Visible = isEdit;
+
+            //Cancel
+            item.FindControl("lnkCancel").Visible = isEdit;
+        }
+
+        protected void lnkEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void lnkDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void lnkSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void lnkCancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void AddCompetence_Click(object sender, EventArgs e)
+        {
+            string competenceName = this.txtAddCompetence.Text.Trim();
+
+            this.competenceService.AddCompetence(competenceName);
+            this.txtAddCompetence.Text = null;
+
+            Bind();
         }
     }
 }

@@ -20,6 +20,18 @@
   <wsdl:message name="IPositionWcfService_GetAllPositions_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllPositionsResponse" />
   </wsdl:message>
+  <wsdl:message name="IPositionWcfService_UpdatePosition_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePosition" />
+  </wsdl:message>
+  <wsdl:message name="IPositionWcfService_UpdatePosition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPositionWcfService_AddPosition_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPosition" />
+  </wsdl:message>
+  <wsdl:message name="IPositionWcfService_AddPosition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPositionResponse" />
+  </wsdl:message>
   <wsdl:portType name="IPositionWcfService">
     <wsdl:operation name="GetAllPositionsByName">
       <wsdl:input wsaw:Action="http://tempuri.org/IPositionWcfService/GetAllPositionsByName" message="tns:IPositionWcfService_GetAllPositionsByName_InputMessage" />
@@ -28,6 +40,14 @@
     <wsdl:operation name="GetAllPositions">
       <wsdl:input wsaw:Action="http://tempuri.org/IPositionWcfService/GetAllPositions" message="tns:IPositionWcfService_GetAllPositions_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPositionWcfService/GetAllPositionsResponse" message="tns:IPositionWcfService_GetAllPositions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePosition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPositionWcfService/UpdatePosition" message="tns:IPositionWcfService_UpdatePosition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPositionWcfService/UpdatePositionResponse" message="tns:IPositionWcfService_UpdatePosition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPosition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPositionWcfService/AddPosition" message="tns:IPositionWcfService_AddPosition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPositionWcfService/AddPositionResponse" message="tns:IPositionWcfService_AddPosition_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IPositionWcfService" type="tns:IPositionWcfService">
@@ -43,6 +63,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetAllPositions">
       <soap:operation soapAction="http://tempuri.org/IPositionWcfService/GetAllPositions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePosition">
+      <soap:operation soapAction="http://tempuri.org/IPositionWcfService/UpdatePosition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPosition">
+      <soap:operation soapAction="http://tempuri.org/IPositionWcfService/AddPosition" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

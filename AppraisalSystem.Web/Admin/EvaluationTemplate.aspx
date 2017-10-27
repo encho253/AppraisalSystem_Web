@@ -14,6 +14,7 @@
         <p>Select Position</p>
         <asp:DropDownList ID="DropDownPositions" class="btn btn-default dropdown-toggle" runat="server" AutoPostBack="True"></asp:DropDownList>
     </div>
+    <br />
     <div class="inlineEl">
         <p>Select Competence</p>
         <asp:DropDownList ID="DropDownListCompetences" class="btn btn-default dropdown-toggle" runat="server" AutoPostBack="True"></asp:DropDownList>
@@ -29,8 +30,7 @@
                     <tr>
                         <th class="thead-inverse">
                             <asp:Label ID="LabelSelectedValue" runat="server"
-                                Text="<%#: this.DropDownListCompetences.SelectedItem.Text %>" />
-                            competences
+                                Text="Questions" />
                         </th>
                         <th class="thead-inverse">Options
                         </th>

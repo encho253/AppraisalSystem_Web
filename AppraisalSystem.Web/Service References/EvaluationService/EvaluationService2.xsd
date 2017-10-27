@@ -15,52 +15,13 @@
   <xs:element name="Evaluation" nillable="true" type="tns:Evaluation" />
   <xs:complexType name="EvaluationTemplate">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Evaluations" nillable="true" type="tns:ArrayOfEvaluation" />
       <xs:element minOccurs="0" name="ExcelDataMapping" nillable="true" type="xs:base64Binary" />
       <xs:element minOccurs="0" name="ExcelTemplate" nillable="true" type="xs:base64Binary" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="Position" nillable="true" type="tns:Position" />
       <xs:element minOccurs="0" name="QualificationId" type="xs:int" />
-      <xs:element minOccurs="0" name="Questions" nillable="true" type="tns:ArrayOfQuestion" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="EvaluationTemplate" nillable="true" type="tns:EvaluationTemplate" />
-  <xs:complexType name="ArrayOfEvaluation">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Evaluation" nillable="true" type="tns:Evaluation" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfEvaluation" nillable="true" type="tns:ArrayOfEvaluation" />
-  <xs:complexType name="Position">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="EvaluationTemplates" nillable="true" type="tns:ArrayOfEvaluationTemplate" />
-      <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Questions" nillable="true" type="tns:ArrayOfQuestion" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Position" nillable="true" type="tns:Position" />
-  <xs:complexType name="ArrayOfEvaluationTemplate">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="EvaluationTemplate" nillable="true" type="tns:EvaluationTemplate" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfEvaluationTemplate" nillable="true" type="tns:ArrayOfEvaluationTemplate" />
-  <xs:complexType name="ArrayOfQuestion">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Question" nillable="true" type="tns:Question" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfQuestion" nillable="true" type="tns:ArrayOfQuestion" />
-  <xs:complexType name="Question">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="CompetenceId" type="xs:int" />
-      <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="PositionId" nillable="true" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Question" nillable="true" type="tns:Question" />
   <xs:complexType name="ArrayOfResult">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Result" nillable="true" type="tns:Result" />
@@ -82,6 +43,15 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Result" nillable="true" type="tns:Result" />
+  <xs:complexType name="Question">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompetenceId" type="xs:int" />
+      <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="PositionId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Question" nillable="true" type="tns:Question" />
   <xs:complexType name="Rating">
     <xs:sequence>
       <xs:element minOccurs="0" name="Explanation" nillable="true" type="xs:string" />
@@ -106,6 +76,12 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="ArrayOfEvaluation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Evaluation" nillable="true" type="tns:Evaluation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEvaluation" nillable="true" type="tns:ArrayOfEvaluation" />
   <xs:complexType name="Role">
     <xs:sequence>
       <xs:element minOccurs="0" name="Id" type="xs:int" />

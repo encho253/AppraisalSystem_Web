@@ -5,32 +5,100 @@
       <xsd:import schemaLocation="http://localhost:51360/CompetenceService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:51360/CompetenceService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:51360/CompetenceService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:51360/CompetenceService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DB" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="ICompetenceWcfService_AddCompetence_InputMessage">
-    <wsdl:part name="parameters" element="tns:AddCompetence" />
-  </wsdl:message>
-  <wsdl:message name="ICompetenceWcfService_AddCompetence_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddCompetenceResponse" />
-  </wsdl:message>
   <wsdl:message name="ICompetenceWcfService_GetAllCompetence_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAllCompetence" />
   </wsdl:message>
   <wsdl:message name="ICompetenceWcfService_GetAllCompetence_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllCompetenceResponse" />
   </wsdl:message>
+  <wsdl:message name="ICompetenceWcfService_GetAllCompetences_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompetences" />
+  </wsdl:message>
+  <wsdl:message name="ICompetenceWcfService_GetAllCompetences_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompetencesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompetenceWcfService_GetAllCompetenceByPosition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompetenceByPosition" />
+  </wsdl:message>
+  <wsdl:message name="ICompetenceWcfService_GetAllCompetenceByPosition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompetenceByPositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompetenceWcfService_AddCompetence_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompetence" />
+  </wsdl:message>
+  <wsdl:message name="ICompetenceWcfService_AddCompetence_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCompetenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompetenceWcfService_UpdateCompetence_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompetence" />
+  </wsdl:message>
+  <wsdl:message name="ICompetenceWcfService_UpdateCompetence_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompetenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICompetenceWcfService_GetAllCompetencesNameByPosition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompetencesNameByPosition" />
+  </wsdl:message>
+  <wsdl:message name="ICompetenceWcfService_GetAllCompetencesNameByPosition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompetencesNameByPositionResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICompetenceWcfService">
-    <wsdl:operation name="AddCompetence">
-      <wsdl:input wsaw:Action="http://tempuri.org/ICompetenceWcfService/AddCompetence" message="tns:ICompetenceWcfService_AddCompetence_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ICompetenceWcfService/AddCompetenceResponse" message="tns:ICompetenceWcfService_AddCompetence_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="GetAllCompetence">
       <wsdl:input wsaw:Action="http://tempuri.org/ICompetenceWcfService/GetAllCompetence" message="tns:ICompetenceWcfService_GetAllCompetence_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICompetenceWcfService/GetAllCompetenceResponse" message="tns:ICompetenceWcfService_GetAllCompetence_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetAllCompetences">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompetenceWcfService/GetAllCompetences" message="tns:ICompetenceWcfService_GetAllCompetences_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompetenceWcfService/GetAllCompetencesResponse" message="tns:ICompetenceWcfService_GetAllCompetences_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompetenceByPosition">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompetenceWcfService/GetAllCompetenceByPosition" message="tns:ICompetenceWcfService_GetAllCompetenceByPosition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompetenceWcfService/GetAllCompetenceByPositionResponse" message="tns:ICompetenceWcfService_GetAllCompetenceByPosition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCompetence">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompetenceWcfService/AddCompetence" message="tns:ICompetenceWcfService_AddCompetence_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompetenceWcfService/AddCompetenceResponse" message="tns:ICompetenceWcfService_AddCompetence_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompetence">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompetenceWcfService/UpdateCompetence" message="tns:ICompetenceWcfService_UpdateCompetence_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompetenceWcfService/UpdateCompetenceResponse" message="tns:ICompetenceWcfService_UpdateCompetence_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompetencesNameByPosition">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompetenceWcfService/GetAllCompetencesNameByPosition" message="tns:ICompetenceWcfService_GetAllCompetencesNameByPosition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompetenceWcfService/GetAllCompetencesNameByPositionResponse" message="tns:ICompetenceWcfService_GetAllCompetencesNameByPosition_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICompetenceWcfService" type="tns:ICompetenceWcfService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllCompetence">
+      <soap:operation soapAction="http://tempuri.org/ICompetenceWcfService/GetAllCompetence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompetences">
+      <soap:operation soapAction="http://tempuri.org/ICompetenceWcfService/GetAllCompetences" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompetenceByPosition">
+      <soap:operation soapAction="http://tempuri.org/ICompetenceWcfService/GetAllCompetenceByPosition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="AddCompetence">
       <soap:operation soapAction="http://tempuri.org/ICompetenceWcfService/AddCompetence" style="document" />
       <wsdl:input>
@@ -40,8 +108,17 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetAllCompetence">
-      <soap:operation soapAction="http://tempuri.org/ICompetenceWcfService/GetAllCompetence" style="document" />
+    <wsdl:operation name="UpdateCompetence">
+      <soap:operation soapAction="http://tempuri.org/ICompetenceWcfService/UpdateCompetence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompetencesNameByPosition">
+      <soap:operation soapAction="http://tempuri.org/ICompetenceWcfService/GetAllCompetencesNameByPosition" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

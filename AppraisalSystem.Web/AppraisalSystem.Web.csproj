@@ -261,6 +261,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Service References\CompetenceService\AppraisalSystem.Web.CompetenceService.Competence.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\CompetenceService\CompetenceService.wsdl" />
     <None Include="Service References\CompetenceService\CompetenceService.xsd">
       <SubType>Designer</SubType>
@@ -274,6 +277,9 @@
     <Content Include="Service References\EvaluationService\AppraisalSystem.Web.EvaluationService.User.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Service References\CompetenceService\CompetenceService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\EvaluationService\EvaluationService.wsdl" />
     <None Include="Service References\EvaluationService\EvaluationService.xsd">
       <SubType>Designer</SubType>

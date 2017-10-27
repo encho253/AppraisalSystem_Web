@@ -180,9 +180,6 @@ namespace AppraisalSystem.Web.EvaluationService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AppraisalSystem.Web.EvaluationService.Evaluation[] EvaluationsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private byte[] ExcelDataMappingField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -192,13 +189,7 @@ namespace AppraisalSystem.Web.EvaluationService {
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AppraisalSystem.Web.EvaluationService.Position PositionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int QualificationIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AppraisalSystem.Web.EvaluationService.Question[] QuestionsField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -207,19 +198,6 @@ namespace AppraisalSystem.Web.EvaluationService {
             }
             set {
                 this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public AppraisalSystem.Web.EvaluationService.Evaluation[] Evaluations {
-            get {
-                return this.EvaluationsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EvaluationsField, value) != true)) {
-                    this.EvaluationsField = value;
-                    this.RaisePropertyChanged("Evaluations");
-                }
             }
         }
         
@@ -263,19 +241,6 @@ namespace AppraisalSystem.Web.EvaluationService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public AppraisalSystem.Web.EvaluationService.Position Position {
-            get {
-                return this.PositionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PositionField, value) != true)) {
-                    this.PositionField = value;
-                    this.RaisePropertyChanged("Position");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public int QualificationId {
             get {
                 return this.QualificationIdField;
@@ -284,19 +249,6 @@ namespace AppraisalSystem.Web.EvaluationService {
                 if ((this.QualificationIdField.Equals(value) != true)) {
                     this.QualificationIdField = value;
                     this.RaisePropertyChanged("QualificationId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public AppraisalSystem.Web.EvaluationService.Question[] Questions {
-            get {
-                return this.QuestionsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.QuestionsField, value) != true)) {
-                    this.QuestionsField = value;
-                    this.RaisePropertyChanged("Questions");
                 }
             }
         }
@@ -675,99 +627,6 @@ namespace AppraisalSystem.Web.EvaluationService {
                 if ((object.ReferenceEquals(this.UserField, value) != true)) {
                     this.UserField = value;
                     this.RaisePropertyChanged("User");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Position", Namespace="http://schemas.datacontract.org/2004/07/DB")]
-    [System.SerializableAttribute()]
-    public partial class Position : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AppraisalSystem.Web.EvaluationService.EvaluationTemplate[] EvaluationTemplatesField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private AppraisalSystem.Web.EvaluationService.Question[] QuestionsField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public AppraisalSystem.Web.EvaluationService.EvaluationTemplate[] EvaluationTemplates {
-            get {
-                return this.EvaluationTemplatesField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EvaluationTemplatesField, value) != true)) {
-                    this.EvaluationTemplatesField = value;
-                    this.RaisePropertyChanged("EvaluationTemplates");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public AppraisalSystem.Web.EvaluationService.Question[] Questions {
-            get {
-                return this.QuestionsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.QuestionsField, value) != true)) {
-                    this.QuestionsField = value;
-                    this.RaisePropertyChanged("Questions");
                 }
             }
         }

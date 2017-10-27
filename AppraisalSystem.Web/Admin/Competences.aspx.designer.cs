@@ -13,12 +13,30 @@ namespace AppraisalSystem.Web.Admin {
     public partial class Competences {
         
         /// <summary>
-        /// DropDownPositions control.
+        /// dataTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownPositions;
+        protected global::System.Web.UI.WebControls.Repeater dataTable;
+        
+        /// <summary>
+        /// txtAddCompetence control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAddCompetence;
+        
+        /// <summary>
+        /// AddCompetence control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AddCompetence;
     }
 }
