@@ -1,9 +1,9 @@
-﻿<%@ Page Title="EvaluationTemplate"
+﻿<%@ Page Title="Questions"
     Language="C#"
     MasterPageFile="~/Admin/MasterPageAdmin.master"
     AutoEventWireup="true"
-    CodeBehind="EvaluationTemplate.aspx.cs"
-    Inherits="AppraisalSystem.Web.Admin.EvaluationTemplate" %>
+    CodeBehind="Questions.aspx.cs"
+    Inherits="AppraisalSystem.Web.Admin.Questions" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderUsersArea" runat="server">
     <div>
@@ -14,12 +14,6 @@
         <p>Select Position</p>
         <asp:DropDownList ID="DropDownPositions" class="btn btn-default dropdown-toggle" runat="server" AutoPostBack="True"></asp:DropDownList>
     </div>
-    <br />
-    <div class="inlineEl">
-        <p>Select Competence</p>
-        <asp:DropDownList ID="DropDownListCompetences" class="btn btn-default dropdown-toggle" runat="server" AutoPostBack="True"></asp:DropDownList>
-    </div>
-
     <div>
         <p>
             <br />
@@ -28,9 +22,9 @@
             <HeaderTemplate>
                 <table class="table table-hover">
                     <tr>
-                        <th class="thead-inverse">
-                            <asp:Label ID="LabelSelectedValue" runat="server"
-                                Text="Questions" />
+                        <th class="thead-inverse">Competence
+                        </th>
+                        <th class="thead-inverse">Content
                         </th>
                         <th class="thead-inverse">Options
                         </th>
@@ -38,6 +32,9 @@
             </HeaderTemplate>
             <ItemTemplate>
                 <tr class="success">
+                    <td>
+                        <asp:Label ID="Label1" runat="server" Text='<%#Eval("CompetenceId")%>'></asp:Label>
+                    </td>
                     <td>
                         <asp:Label ID="lblEdit" runat="server" Text='<%#Eval("Content")%>'></asp:Label>
                         <asp:Label ID="lblId" runat="server" Text='<%#Eval("ID")%>' Visible="false"></asp:Label>
@@ -55,7 +52,14 @@
                 </table>                
             </FooterTemplate>
         </asp:Repeater>
+        <asp:DropDownList ID="DropDownCompetences" class="btn btn-default dropdown-toggle" runat="server"></asp:DropDownList>
+        <p>
+            <br />
+        </p>
         <asp:TextBox ID="txtAddQuestion" CssClass="text-field" TextMode="MultiLine" Rows="2" Width="100%" class="form-control input-sm addQuestion" runat="server" />
+        <p>
+            <br />
+        </p>
         <asp:Button ID="SubmitQuestion" class="btn btn-success addQuestion" Text="Add Question" OnClick="Submit_Question" runat="server" />
     </div>
 </asp:Content>

@@ -10,25 +10,25 @@
 namespace AppraisalSystem.Web.Admin {
     
     
-    public partial class EvaluationTemplate {
+    public partial class CreateForm {
         
         /// <summary>
-        /// DropDownPositions control.
+        /// txtAddUser control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownPositions;
+        protected global::System.Web.UI.WebControls.TextBox txtAddUser;
         
         /// <summary>
-        /// DropDownListCompetences control.
+        /// SearchUser control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownListCompetences;
+        protected global::System.Web.UI.WebControls.Button SearchUser;
         
         /// <summary>
         /// dataTable control.
@@ -38,23 +38,5 @@ namespace AppraisalSystem.Web.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater dataTable;
-        
-        /// <summary>
-        /// txtAddQuestion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAddQuestion;
-        
-        /// <summary>
-        /// SubmitQuestion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SubmitQuestion;
     }
 }

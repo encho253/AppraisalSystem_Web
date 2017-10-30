@@ -11,7 +11,7 @@
             <table class="table table-hover">
                 <tr>
                     <th class="thead-inverse">
-                        <asp:Label ID="LabelEvaluators" runat="server" Text="Position" />
+                        <asp:Label ID="LabelEvaluators" runat="server" Text="Competence" />
                     </th>
                     <th class="thead-inverse">
                         <asp:Label ID="Options" runat="server" Text="Options" />

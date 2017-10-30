@@ -194,8 +194,8 @@
   <ItemGroup>
     <Content Include="Account\Login.aspx" />
     <Content Include="Admin\Competences.aspx" />
-    <Content Include="Admin\Evaluation.aspx" />
-    <Content Include="Admin\EvaluationTemplate.aspx" />
+    <Content Include="Admin\CreateForm.aspx" />
+    <Content Include="Admin\Questions.aspx" />
     <Content Include="Admin\Positions.aspx" />
     <Content Include="Admin\Register.aspx" />
     <Content Include="Admin\Results.aspx" />
@@ -388,12 +388,12 @@
     <Compile Include="Admin\Competences.aspx.designer.cs">
       <DependentUpon>Competences.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Evaluation.aspx.cs">
-      <DependentUpon>Evaluation.aspx</DependentUpon>
+    <Compile Include="Admin\CreateForm.aspx.cs">
+      <DependentUpon>CreateForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Evaluation.aspx.designer.cs">
-      <DependentUpon>Evaluation.aspx</DependentUpon>
+    <Compile Include="Admin\CreateForm.aspx.designer.cs">
+      <DependentUpon>CreateForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\MasterPageAdmin.master.cs">
       <DependentUpon>MasterPageAdmin.master</DependentUpon>
@@ -402,12 +402,12 @@
     <Compile Include="Admin\MasterPageAdmin.master.designer.cs">
       <DependentUpon>MasterPageAdmin.master</DependentUpon>
     </Compile>
-    <Compile Include="Admin\EvaluationTemplate.aspx.cs">
-      <DependentUpon>EvaluationTemplate.aspx</DependentUpon>
+    <Compile Include="Admin\Questions.aspx.cs">
+      <DependentUpon>Questions.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\EvaluationTemplate.aspx.designer.cs">
-      <DependentUpon>EvaluationTemplate.aspx</DependentUpon>
+    <Compile Include="Admin\Questions.aspx.designer.cs">
+      <DependentUpon>Questions.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Positions.aspx.cs">
       <DependentUpon>Positions.aspx</DependentUpon>

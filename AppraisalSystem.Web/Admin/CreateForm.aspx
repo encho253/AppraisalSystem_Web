@@ -2,8 +2,8 @@
     Language="C#"
     MasterPageFile="~/Admin/MasterPageAdmin.master"
     AutoEventWireup="true"
-    CodeBehind="Evaluation.aspx.cs"
-    Inherits="AppraisalSystem.Web.Admin.Evaluation" %>
+    CodeBehind="CreateForm.aspx.cs"
+    Inherits="AppraisalSystem.Web.Admin.CreateForm" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderUsersArea" runat="server">
     <h4>Create evaluation template</h4>

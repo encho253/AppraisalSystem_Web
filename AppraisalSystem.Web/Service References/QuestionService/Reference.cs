@@ -147,6 +147,12 @@ namespace AppraisalSystem.Web.QuestionService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionWcfService/Delete", ReplyAction="http://tempuri.org/IQuestionWcfService/DeleteResponse")]
         System.Threading.Tasks.Task DeleteAsync(int questionId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionWcfService/GetByPosition", ReplyAction="http://tempuri.org/IQuestionWcfService/GetByPositionResponse")]
+        AppraisalSystem.Web.QuestionService.Question[] GetByPosition(string position);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionWcfService/GetByPosition", ReplyAction="http://tempuri.org/IQuestionWcfService/GetByPositionResponse")]
+        System.Threading.Tasks.Task<AppraisalSystem.Web.QuestionService.Question[]> GetByPositionAsync(string position);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -222,6 +228,14 @@ namespace AppraisalSystem.Web.QuestionService {
         
         public System.Threading.Tasks.Task DeleteAsync(int questionId) {
             return base.Channel.DeleteAsync(questionId);
+        }
+        
+        public AppraisalSystem.Web.QuestionService.Question[] GetByPosition(string position) {
+            return base.Channel.GetByPosition(position);
+        }
+        
+        public System.Threading.Tasks.Task<AppraisalSystem.Web.QuestionService.Question[]> GetByPositionAsync(string position) {
+            return base.Channel.GetByPositionAsync(position);
         }
     }
 }

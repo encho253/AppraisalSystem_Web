@@ -187,11 +187,11 @@ namespace AppraisalSystem.Web.CompetenceService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CompetenceService.ICompetenceWcfService")]
     public interface ICompetenceWcfService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompetenceWcfService/GetAllCompetence", ReplyAction="http://tempuri.org/ICompetenceWcfService/GetAllCompetenceResponse")]
-        string[] GetAllCompetence();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompetenceWcfService/GetAllCompetencesByName", ReplyAction="http://tempuri.org/ICompetenceWcfService/GetAllCompetencesByNameResponse")]
+        string[] GetAllCompetencesByName();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompetenceWcfService/GetAllCompetence", ReplyAction="http://tempuri.org/ICompetenceWcfService/GetAllCompetenceResponse")]
-        System.Threading.Tasks.Task<string[]> GetAllCompetenceAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompetenceWcfService/GetAllCompetencesByName", ReplyAction="http://tempuri.org/ICompetenceWcfService/GetAllCompetencesByNameResponse")]
+        System.Threading.Tasks.Task<string[]> GetAllCompetencesByNameAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompetenceWcfService/GetAllCompetences", ReplyAction="http://tempuri.org/ICompetenceWcfService/GetAllCompetencesResponse")]
         AppraisalSystem.Web.CompetenceService.Competence[] GetAllCompetences();
@@ -251,12 +251,12 @@ namespace AppraisalSystem.Web.CompetenceService {
                 base(binding, remoteAddress) {
         }
         
-        public string[] GetAllCompetence() {
-            return base.Channel.GetAllCompetence();
+        public string[] GetAllCompetencesByName() {
+            return base.Channel.GetAllCompetencesByName();
         }
         
-        public System.Threading.Tasks.Task<string[]> GetAllCompetenceAsync() {
-            return base.Channel.GetAllCompetenceAsync();
+        public System.Threading.Tasks.Task<string[]> GetAllCompetencesByNameAsync() {
+            return base.Channel.GetAllCompetencesByNameAsync();
         }
         
         public AppraisalSystem.Web.CompetenceService.Competence[] GetAllCompetences() {

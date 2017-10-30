@@ -7,14 +7,14 @@ using System.Web.UI.WebControls;
 
 namespace AppraisalSystem.Web.Admin
 {
-    public partial class EvaluationTemplate : System.Web.UI.Page
+    public partial class Questions : System.Web.UI.Page
     {
         private IQuestionWcfService questionService;
         private ICompetenceWcfService competenceService;
         private IPositionWcfService positionService;
         private IEnumerable<QuestionService.Question> questions;
 
-        public EvaluationTemplate()
+        public Questions()
         {
             this.questionService = new QuestionWcfServiceClient();
             this.competenceService = new CompetenceWcfServiceClient();
@@ -25,16 +25,15 @@ namespace AppraisalSystem.Web.Admin
         protected void Page_Load(object sender, EventArgs e)
         {
             this.DropDownPositions.SelectedIndexChanged += new EventHandler(this.Selection_Change1);
-            this.DropDownListCompetences.SelectedIndexChanged += new EventHandler(this.Selection_Change);
+    
 
             if (!IsPostBack)
             {
                 this.DropDownPositions.DataSource = this.positionService.GetAllPositionsByName();
                 this.DropDownPositions.DataBind();
 
-                var pppp = this.competenceService.GetAllCompetencesNameByPosition(this.DropDownPositions.Text.Trim()); 
-                this.DropDownListCompetences.DataSource = this.competenceService.GetAllCompetencesNameByPosition(this.DropDownPositions.Text.Trim());
-                this.DropDownListCompetences.DataBind();
+                this.DropDownCompetences.DataSource = this.competenceService.GetAllCompetencesByName();
+                this.DropDownCompetences.DataBind();
 
                 Bind();
             }
@@ -42,15 +41,13 @@ namespace AppraisalSystem.Web.Admin
 
         protected void Bind()
         {
-            this.questions = this.questionService.GetQuestionByPositionAndCompetence(this.DropDownPositions.SelectedValue, this.DropDownListCompetences.SelectedValue);
+            this.questions = this.questionService.GetByPosition(this.DropDownPositions.SelectedValue);
             this.dataTable.DataSource = questions;
             this.dataTable.DataBind();
         }
 
         public void Selection_Change1(Object sender, EventArgs e)
         {
-            this.DropDownListCompetences.DataSource = this.competenceService.GetAllCompetencesNameByPosition(this.DropDownPositions.Text.Trim());
-            this.DropDownListCompetences.DataBind();
             Bind();
         }
 
@@ -112,7 +109,7 @@ namespace AppraisalSystem.Web.Admin
         protected void Submit_Question(object sender, EventArgs e)
         {
             string position = this.DropDownPositions.SelectedValue;
-            string competence = this.DropDownListCompetences.SelectedValue;
+            string competence = this.DropDownCompetences.SelectedValue;
             string content = this.txtAddQuestion.Text;
 
             this.questionService.AddQuestion(content, position, competence);

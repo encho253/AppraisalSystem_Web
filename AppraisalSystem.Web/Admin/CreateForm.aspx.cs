@@ -4,12 +4,12 @@ using System;
 
 namespace AppraisalSystem.Web.Admin
 {
-    public partial class Evaluation : System.Web.UI.Page
+    public partial class CreateForm : System.Web.UI.Page
     {
         private IEvaluationWcfService evaluationService;
         private IAccountWcfService accountService;
 
-        public Evaluation()
+        public CreateForm()
         {
             this.evaluationService = new EvaluationWcfServiceClient();
             this.accountService = new AccountWcfServiceClient();

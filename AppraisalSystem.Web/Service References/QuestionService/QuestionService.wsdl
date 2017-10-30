@@ -43,6 +43,12 @@
   <wsdl:message name="IQuestionWcfService_Delete_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteResponse" />
   </wsdl:message>
+  <wsdl:message name="IQuestionWcfService_GetByPosition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByPosition" />
+  </wsdl:message>
+  <wsdl:message name="IQuestionWcfService_GetByPosition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByPositionResponse" />
+  </wsdl:message>
   <wsdl:portType name="IQuestionWcfService">
     <wsdl:operation name="GetQuestionsByCompetence">
       <wsdl:input wsaw:Action="http://tempuri.org/IQuestionWcfService/GetQuestionsByCompetence" message="tns:IQuestionWcfService_GetQuestionsByCompetence_InputMessage" />
@@ -67,6 +73,10 @@
     <wsdl:operation name="Delete">
       <wsdl:input wsaw:Action="http://tempuri.org/IQuestionWcfService/Delete" message="tns:IQuestionWcfService_Delete_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IQuestionWcfService/DeleteResponse" message="tns:IQuestionWcfService_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByPosition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IQuestionWcfService/GetByPosition" message="tns:IQuestionWcfService_GetByPosition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IQuestionWcfService/GetByPositionResponse" message="tns:IQuestionWcfService_GetByPosition_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IQuestionWcfService" type="tns:IQuestionWcfService">
@@ -118,6 +128,15 @@
     </wsdl:operation>
     <wsdl:operation name="Delete">
       <soap:operation soapAction="http://tempuri.org/IQuestionWcfService/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetByPosition">
+      <soap:operation soapAction="http://tempuri.org/IQuestionWcfService/GetByPosition" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
