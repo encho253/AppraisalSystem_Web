@@ -1,18 +1,11 @@
-﻿<%@ Page Title="Evaluation"
-    Language="C#"
+﻿<%@ Page Title="EvaluationTemplate" 
+    Language="C#" 
     MasterPageFile="~/Admin/MasterPageAdmin.master"
-    AutoEventWireup="true"
-    CodeBehind="CreateForm.aspx.cs"
-    Inherits="AppraisalSystem.Web.Admin.CreateForm" %>
+     AutoEventWireup="true" 
+    CodeBehind="EvaluationTemplate.aspx.cs" 
+    Inherits="AppraisalSystem.Web.Admin.EvaluationTemplate" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderUsersArea" runat="server">
-    <h4>Create evaluation template</h4>
-    <div>
-        <p>Search User</p>
-        <asp:TextBox ID="txtAddUser" Width="100%" class="form-control input-sm" runat="server" />
-        <asp:Button ID="SearchUser" class="btn btn-success" Text="Search" OnClick="SearchUser_Click" runat="server" />
-    </div>
-    <br />
     <asp:Repeater ID="dataTable" runat="server">
         <HeaderTemplate>
             <table class="table table-hover">

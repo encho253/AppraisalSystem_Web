@@ -56,7 +56,8 @@ namespace AppraisalSystem.Web.Admin
 
         protected void lnkEdit_Click(object sender, EventArgs e)
         {
-
+            RepeaterItem item = (sender as LinkButton).Parent as RepeaterItem;
+            this.ToggleElements(item, true);
         }
 
         protected void lnkDelete_Click(object sender, EventArgs e)
@@ -66,12 +67,19 @@ namespace AppraisalSystem.Web.Admin
 
         protected void lnkSave_Click(object sender, EventArgs e)
         {
+            RepeaterItem item = ((LinkButton)sender).Parent as RepeaterItem;
+            string competenceContent = ((TextBox)item.FindControl("txtEdit")).Text.Trim();
+            int competenceId = int.Parse(((Label)item.FindControl("lblId")).Text.Trim());
 
+            this.competenceService.UpdateCompetence(competenceId, competenceContent);
+
+            Bind();
         }
 
         protected void lnkCancel_Click(object sender, EventArgs e)
         {
-
+            RepeaterItem item = (sender as LinkButton).Parent as RepeaterItem;
+            this.ToggleElements(item, false);
         }
 
         protected void AddCompetence_Click(object sender, EventArgs e)

@@ -1,6 +1,7 @@
 ﻿using AppraisalSystem.Web.AccountService;
 using AppraisalSystem.Web.EvaluationService;
 using System;
+using System.Web.UI.WebControls;
 
 namespace AppraisalSystem.Web.Admin
 {
@@ -22,14 +23,24 @@ namespace AppraisalSystem.Web.Admin
 
         protected void SearchUser_Click(object sender, EventArgs e)
         {
-            var evaluators = this.evaluationService.GetAllEvaluatorsForEvaluation(this.txtAddUser.Text);
+            BindData();
+        }
+
+        public void BindData()
+        {
+            var evaluators = this.evaluationService.GetAllEvaluatorsForEvaluation(this.txtAddUser.Text.Trim());
             this.dataTable.DataSource = evaluators;
             this.dataTable.DataBind();
         }
 
         protected void AddEvaluator_Click(object sender, EventArgs e)
         {
-            
+            RepeaterItem item = ((LinkButton)sender).Parent as RepeaterItem;
+            string evaluator = ((TextBox)item.FindControl("txtAddEvaluator")).Text.Trim();
+
+            this.evaluationService.AddEvaluatorToEvaluation(this.txtAddUser.Text.Trim(), evaluator);
+
+            BindData();
         }
     }
 }
