@@ -195,6 +195,7 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Admin\Competences.aspx" />
     <Content Include="Admin\CreateForm.aspx" />
+    <Content Include="Admin\EvaluationInfo.aspx" />
     <Content Include="Admin\EvaluationTemplate.aspx" />
     <Content Include="Admin\Questions.aspx" />
     <Content Include="Admin\Positions.aspx" />
@@ -265,6 +266,9 @@
     <Content Include="Service References\CompetenceService\AppraisalSystem.Web.CompetenceService.Competence.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Service References\CompetenceService\AppraisalSystem.Web.CompetenceService.CompetenceDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\CompetenceService\CompetenceService.wsdl" />
     <None Include="Service References\CompetenceService\CompetenceService.xsd">
       <SubType>Designer</SubType>
@@ -279,6 +283,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Service References\CompetenceService\CompetenceService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\EvaluationService\AppraisalSystem.Web.EvaluationService.Evaluation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\CompetenceService\CompetenceService4.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\EvaluationService\EvaluationService.wsdl" />
@@ -297,9 +307,6 @@
     <None Include="Service References\PositionService\PositionService.disco" />
     <None Include="Service References\PositionService\configuration91.svcinfo" />
     <None Include="Service References\PositionService\configuration.svcinfo" />
-    <None Include="Service References\PositionService\PositionService3.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\PositionService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -395,6 +402,13 @@
     </Compile>
     <Compile Include="Admin\CreateForm.aspx.designer.cs">
       <DependentUpon>CreateForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EvaluationInfo.aspx.cs">
+      <DependentUpon>EvaluationInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EvaluationInfo.aspx.designer.cs">
+      <DependentUpon>EvaluationInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\EvaluationTemplate.aspx.cs">
       <DependentUpon>EvaluationTemplate.aspx</DependentUpon>

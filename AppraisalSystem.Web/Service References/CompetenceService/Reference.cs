@@ -74,6 +74,83 @@ namespace AppraisalSystem.Web.CompetenceService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CompetenceDto", Namespace="http://schemas.datacontract.org/2004/07/Interfaces.DTO.Response")]
+    [System.SerializableAttribute()]
+    public partial class CompetenceDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string KeyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int QuestionsCountField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Key {
+            get {
+                return this.KeyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.KeyField, value) != true)) {
+                    this.KeyField = value;
+                    this.RaisePropertyChanged("Key");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int QuestionsCount {
+            get {
+                return this.QuestionsCountField;
+            }
+            set {
+                if ((this.QuestionsCountField.Equals(value) != true)) {
+                    this.QuestionsCountField = value;
+                    this.RaisePropertyChanged("QuestionsCount");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CompetenceService.ICompetenceWcfService")]
     public interface ICompetenceWcfService {
@@ -113,6 +190,12 @@ namespace AppraisalSystem.Web.CompetenceService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompetenceWcfService/GetAllCompetencesNameByPosition", ReplyAction="http://tempuri.org/ICompetenceWcfService/GetAllCompetencesNameByPositionResponse")]
         System.Threading.Tasks.Task<string[]> GetAllCompetencesNameByPositionAsync(string positionName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompetenceWcfService/GetAllCompetencesByPosition", ReplyAction="http://tempuri.org/ICompetenceWcfService/GetAllCompetencesByPositionResponse")]
+        AppraisalSystem.Web.CompetenceService.CompetenceDto[] GetAllCompetencesByPosition(int positionId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICompetenceWcfService/GetAllCompetencesByPosition", ReplyAction="http://tempuri.org/ICompetenceWcfService/GetAllCompetencesByPositionResponse")]
+        System.Threading.Tasks.Task<AppraisalSystem.Web.CompetenceService.CompetenceDto[]> GetAllCompetencesByPositionAsync(int positionId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -188,6 +271,14 @@ namespace AppraisalSystem.Web.CompetenceService {
         
         public System.Threading.Tasks.Task<string[]> GetAllCompetencesNameByPositionAsync(string positionName) {
             return base.Channel.GetAllCompetencesNameByPositionAsync(positionName);
+        }
+        
+        public AppraisalSystem.Web.CompetenceService.CompetenceDto[] GetAllCompetencesByPosition(int positionId) {
+            return base.Channel.GetAllCompetencesByPosition(positionId);
+        }
+        
+        public System.Threading.Tasks.Task<AppraisalSystem.Web.CompetenceService.CompetenceDto[]> GetAllCompetencesByPositionAsync(int positionId) {
+            return base.Channel.GetAllCompetencesByPositionAsync(positionId);
         }
     }
 }

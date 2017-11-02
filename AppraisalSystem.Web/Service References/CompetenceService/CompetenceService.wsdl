@@ -6,6 +6,7 @@
       <xsd:import schemaLocation="http://localhost:51360/CompetenceService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:51360/CompetenceService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
       <xsd:import schemaLocation="http://localhost:51360/CompetenceService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DB" />
+      <xsd:import schemaLocation="http://localhost:51360/CompetenceService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Interfaces.DTO.Response" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ICompetenceWcfService_GetAllCompetencesByName_InputMessage">
@@ -44,6 +45,12 @@
   <wsdl:message name="ICompetenceWcfService_GetAllCompetencesNameByPosition_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllCompetencesNameByPositionResponse" />
   </wsdl:message>
+  <wsdl:message name="ICompetenceWcfService_GetAllCompetencesByPosition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompetencesByPosition" />
+  </wsdl:message>
+  <wsdl:message name="ICompetenceWcfService_GetAllCompetencesByPosition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCompetencesByPositionResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICompetenceWcfService">
     <wsdl:operation name="GetAllCompetencesByName">
       <wsdl:input wsaw:Action="http://tempuri.org/ICompetenceWcfService/GetAllCompetencesByName" message="tns:ICompetenceWcfService_GetAllCompetencesByName_InputMessage" />
@@ -68,6 +75,10 @@
     <wsdl:operation name="GetAllCompetencesNameByPosition">
       <wsdl:input wsaw:Action="http://tempuri.org/ICompetenceWcfService/GetAllCompetencesNameByPosition" message="tns:ICompetenceWcfService_GetAllCompetencesNameByPosition_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICompetenceWcfService/GetAllCompetencesNameByPositionResponse" message="tns:ICompetenceWcfService_GetAllCompetencesNameByPosition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompetencesByPosition">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICompetenceWcfService/GetAllCompetencesByPosition" message="tns:ICompetenceWcfService_GetAllCompetencesByPosition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICompetenceWcfService/GetAllCompetencesByPositionResponse" message="tns:ICompetenceWcfService_GetAllCompetencesByPosition_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICompetenceWcfService" type="tns:ICompetenceWcfService">
@@ -119,6 +130,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetAllCompetencesNameByPosition">
       <soap:operation soapAction="http://tempuri.org/ICompetenceWcfService/GetAllCompetencesNameByPosition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCompetencesByPosition">
+      <soap:operation soapAction="http://tempuri.org/ICompetenceWcfService/GetAllCompetencesByPosition" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

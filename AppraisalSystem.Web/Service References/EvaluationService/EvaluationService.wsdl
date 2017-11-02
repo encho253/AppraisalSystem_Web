@@ -25,6 +25,12 @@
   <wsdl:message name="IEvaluationWcfService_GetAllEvaluatorsForEvaluation_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllEvaluatorsForEvaluationResponse" />
   </wsdl:message>
+  <wsdl:message name="IEvaluationWcfService_GetAllEvaluationsForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEvaluationsForUser" />
+  </wsdl:message>
+  <wsdl:message name="IEvaluationWcfService_GetAllEvaluationsForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEvaluationsForUserResponse" />
+  </wsdl:message>
   <wsdl:portType name="IEvaluationWcfService">
     <wsdl:operation name="CreateEvaluation">
       <wsdl:input wsaw:Action="http://tempuri.org/IEvaluationWcfService/CreateEvaluation" message="tns:IEvaluationWcfService_CreateEvaluation_InputMessage" />
@@ -37,6 +43,10 @@
     <wsdl:operation name="GetAllEvaluatorsForEvaluation">
       <wsdl:input wsaw:Action="http://tempuri.org/IEvaluationWcfService/GetAllEvaluatorsForEvaluation" message="tns:IEvaluationWcfService_GetAllEvaluatorsForEvaluation_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IEvaluationWcfService/GetAllEvaluatorsForEvaluationResponse" message="tns:IEvaluationWcfService_GetAllEvaluatorsForEvaluation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEvaluationsForUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEvaluationWcfService/GetAllEvaluationsForUser" message="tns:IEvaluationWcfService_GetAllEvaluationsForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEvaluationWcfService/GetAllEvaluationsForUserResponse" message="tns:IEvaluationWcfService_GetAllEvaluationsForUser_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IEvaluationWcfService" type="tns:IEvaluationWcfService">
@@ -61,6 +71,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetAllEvaluatorsForEvaluation">
       <soap:operation soapAction="http://tempuri.org/IEvaluationWcfService/GetAllEvaluatorsForEvaluation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEvaluationsForUser">
+      <soap:operation soapAction="http://tempuri.org/IEvaluationWcfService/GetAllEvaluationsForUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -22,12 +22,11 @@
     <MetadataSource Address="http://localhost:51360/PositionService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
+    <MetadataFile FileName="PositionService.disco" MetadataType="Disco" ID="b67b4ff5-df83-4498-a164-83cd6c345729" SourceId="1" SourceUrl="http://localhost:51360/PositionService.svc?disco" />
     <MetadataFile FileName="PositionService.wsdl" MetadataType="Wsdl" ID="f9e4659e-63cf-4090-a4b1-8cc476dea579" SourceId="1" SourceUrl="http://localhost:51360/PositionService.svc?wsdl" />
-    <MetadataFile FileName="PositionService2.xsd" MetadataType="Schema" ID="029f1ec3-610d-4950-a1c7-feb586d25d5e" SourceId="1" SourceUrl="http://localhost:51360/PositionService.svc?xsd=xsd2" />
     <MetadataFile FileName="PositionService.xsd" MetadataType="Schema" ID="6bdaed82-19a1-4353-95fb-a02fd03ed949" SourceId="1" SourceUrl="http://localhost:51360/PositionService.svc?xsd=xsd1" />
     <MetadataFile FileName="PositionService1.xsd" MetadataType="Schema" ID="8d163003-e7af-45da-b519-272a41d8375f" SourceId="1" SourceUrl="http://localhost:51360/PositionService.svc?xsd=xsd0" />
-    <MetadataFile FileName="PositionService.disco" MetadataType="Disco" ID="b67b4ff5-df83-4498-a164-83cd6c345729" SourceId="1" SourceUrl="http://localhost:51360/PositionService.svc?disco" />
-    <MetadataFile FileName="PositionService3.xsd" MetadataType="Schema" ID="5f68a3df-3e1f-42dc-8d79-b7013f6bf075" SourceId="1" SourceUrl="http://localhost:51360/PositionService.svc?xsd=xsd3" />
+    <MetadataFile FileName="PositionService2.xsd" MetadataType="Schema" ID="029f1ec3-610d-4950-a1c7-feb586d25d5e" SourceId="1" SourceUrl="http://localhost:51360/PositionService.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

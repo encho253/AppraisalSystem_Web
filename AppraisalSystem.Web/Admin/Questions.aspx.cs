@@ -3,6 +3,7 @@ using AppraisalSystem.Web.PositionService;
 using AppraisalSystem.Web.QuestionService;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web.UI.WebControls;
 
 namespace AppraisalSystem.Web.Admin
@@ -12,48 +13,71 @@ namespace AppraisalSystem.Web.Admin
         private IQuestionWcfService questionService;
         private ICompetenceWcfService competenceService;
         private IPositionWcfService positionService;
-        private IEnumerable<QuestionService.Question> questions;
+        private IEnumerable<Question> questions;
 
         public Questions()
         {
             this.questionService = new QuestionWcfServiceClient();
             this.competenceService = new CompetenceWcfServiceClient();
             this.positionService = new PositionWcfServiceClient();
-            this.questions = new List<QuestionService.Question>();
+            this.questions = new List<Question>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.DropDownPositions.SelectedIndexChanged += new EventHandler(this.Selection_Change1);
-    
+            this.DropDownPositions.SelectedIndexChanged += new EventHandler(this.Selection_Change);
+            IEnumerable<Position> positions = this.positionService.GetAllPositions();
 
             if (!IsPostBack)
             {
-                this.DropDownPositions.DataSource = this.positionService.GetAllPositionsByName();
+                this.DropDownPositions.DataSource = positions.Select(x => x.Name);
                 this.DropDownPositions.DataBind();
 
-                this.DropDownCompetences.DataSource = this.competenceService.GetAllCompetencesByName();
-                this.DropDownCompetences.DataBind();
-
-                Bind();
-            }
+                BindCompetences();
+                BindQuestions();
+            }        
         }
 
-        protected void Bind()
+        protected void BindQuestions()
         {
             this.questions = this.questionService.GetByPosition(this.DropDownPositions.SelectedValue);
             this.dataTable.DataSource = questions;
             this.dataTable.DataBind();
         }
 
-        public void Selection_Change1(Object sender, EventArgs e)
+        protected void BindCompetences()
         {
-            Bind();
+            IEnumerable<Position> positions = this.positionService.GetAllPositions();
+            int positionId = SelectedPositionId(positions);
+
+            var datasource = this.competenceService.GetAllCompetencesByPosition(positionId)
+                                    .Select(x => new
+                                    {
+                                        x.Id,
+                                        x.Key,
+                                        x.QuestionsCount,
+                                        DisplayField = String.Format("{0} ({1})", x.Key, x.QuestionsCount)
+                                    })
+                                    .OrderByDescending(p => p.QuestionsCount);
+
+            this.DropDownCompetences.DataSource = datasource;
+            this.DropDownCompetences.DataBind();
         }
 
         public void Selection_Change(Object sender, EventArgs e)
         {
-            Bind();
+            BindQuestions();
+            BindCompetences();
+        }
+
+        public int SelectedPositionId(IEnumerable<Position> positions)
+        {
+            string selectedPosition = this.DropDownPositions.SelectedValue;
+            int positionId = positions
+                .FirstOrDefault(x => x.Name == selectedPosition)
+                .Id;
+
+            return positionId;
         }
 
         private void ToggleElements(RepeaterItem item, bool isEdit)
@@ -86,7 +110,8 @@ namespace AppraisalSystem.Web.Admin
 
             this.questionService.Delete(questionId);
 
-            Bind();
+            BindQuestions();
+            BindCompetences();
         }
 
         protected void lnkSave_Click(object sender, EventArgs e)
@@ -97,7 +122,7 @@ namespace AppraisalSystem.Web.Admin
 
             this.questionService.UpdateQuestion(questionId, questionContent);
 
-            Bind();
+            BindQuestions();
         }
 
         protected void lnkCancel_Click(object sender, EventArgs e)
@@ -109,13 +134,14 @@ namespace AppraisalSystem.Web.Admin
         protected void Submit_Question(object sender, EventArgs e)
         {
             string position = this.DropDownPositions.SelectedValue;
-            string competence = this.DropDownCompetences.SelectedValue;
+            int competenceId = Int32.Parse(this.DropDownCompetences.SelectedValue);
             string content = this.txtAddQuestion.Text;
 
-            this.questionService.AddQuestion(content, position, competence);
+            this.questionService.AddQuestion(content, position, competenceId);
             this.txtAddQuestion.Text = null;
 
-            Bind();
+            BindQuestions();
+            BindCompetences();
         }
     }
 }

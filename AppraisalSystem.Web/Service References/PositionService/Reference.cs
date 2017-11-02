@@ -78,12 +78,6 @@ namespace AppraisalSystem.Web.PositionService {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="PositionService.IPositionWcfService")]
     public interface IPositionWcfService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPositionWcfService/GetAllPositionsByName", ReplyAction="http://tempuri.org/IPositionWcfService/GetAllPositionsByNameResponse")]
-        string[] GetAllPositionsByName();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPositionWcfService/GetAllPositionsByName", ReplyAction="http://tempuri.org/IPositionWcfService/GetAllPositionsByNameResponse")]
-        System.Threading.Tasks.Task<string[]> GetAllPositionsByNameAsync();
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPositionWcfService/GetAllPositions", ReplyAction="http://tempuri.org/IPositionWcfService/GetAllPositionsResponse")]
         AppraisalSystem.Web.PositionService.Position[] GetAllPositions();
         
@@ -128,14 +122,6 @@ namespace AppraisalSystem.Web.PositionService {
         
         public PositionWcfServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        public string[] GetAllPositionsByName() {
-            return base.Channel.GetAllPositionsByName();
-        }
-        
-        public System.Threading.Tasks.Task<string[]> GetAllPositionsByNameAsync() {
-            return base.Channel.GetAllPositionsByNameAsync();
         }
         
         public AppraisalSystem.Web.PositionService.Position[] GetAllPositions() {

@@ -26,6 +26,9 @@
                     <th class="thead-inverse">
                         <asp:Label ID="Label4" runat="server" Text="Email" />
                     </th>
+                    <th class="thead-inverse">
+                        <asp:Label ID="Label7" runat="server" Text="Date" />
+                    </th>
                 </tr>
         </HeaderTemplate>
         <ItemTemplate>

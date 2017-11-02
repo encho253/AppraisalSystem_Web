@@ -52,10 +52,8 @@
                 </table>                
             </FooterTemplate>
         </asp:Repeater>
-        <asp:DropDownList ID="DropDownCompetences" class="btn btn-default dropdown-toggle" runat="server"></asp:DropDownList>
-        <p>
-            <br />
-        </p>
+        <asp:DropDownList ID="DropDownCompetences" class="btn btn-default dropdown-toggle" DataTextField="DisplayField" DataValueField="Id" runat="server">
+        </asp:DropDownList>
         <asp:TextBox ID="txtAddQuestion" CssClass="text-field" TextMode="MultiLine" Rows="2" Width="100%" class="form-control input-sm addQuestion" runat="server" />
         <p>
             <br />

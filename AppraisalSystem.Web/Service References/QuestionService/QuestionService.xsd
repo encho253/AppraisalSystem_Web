@@ -60,7 +60,7 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="questionContent" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="position" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="competence" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="competenceId" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

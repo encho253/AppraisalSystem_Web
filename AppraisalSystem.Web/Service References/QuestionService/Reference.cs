@@ -137,10 +137,10 @@ namespace AppraisalSystem.Web.QuestionService {
         System.Threading.Tasks.Task<AppraisalSystem.Web.QuestionService.Question[]> GetAllAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionWcfService/AddQuestion", ReplyAction="http://tempuri.org/IQuestionWcfService/AddQuestionResponse")]
-        void AddQuestion(string questionContent, string position, string competence);
+        void AddQuestion(string questionContent, string position, int competenceId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionWcfService/AddQuestion", ReplyAction="http://tempuri.org/IQuestionWcfService/AddQuestionResponse")]
-        System.Threading.Tasks.Task AddQuestionAsync(string questionContent, string position, string competence);
+        System.Threading.Tasks.Task AddQuestionAsync(string questionContent, string position, int competenceId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionWcfService/Delete", ReplyAction="http://tempuri.org/IQuestionWcfService/DeleteResponse")]
         void Delete(int questionId);
@@ -214,12 +214,12 @@ namespace AppraisalSystem.Web.QuestionService {
             return base.Channel.GetAllAsync();
         }
         
-        public void AddQuestion(string questionContent, string position, string competence) {
-            base.Channel.AddQuestion(questionContent, position, competence);
+        public void AddQuestion(string questionContent, string position, int competenceId) {
+            base.Channel.AddQuestion(questionContent, position, competenceId);
         }
         
-        public System.Threading.Tasks.Task AddQuestionAsync(string questionContent, string position, string competence) {
-            return base.Channel.AddQuestionAsync(questionContent, position, competence);
+        public System.Threading.Tasks.Task AddQuestionAsync(string questionContent, string position, int competenceId) {
+            return base.Channel.AddQuestionAsync(questionContent, position, competenceId);
         }
         
         public void Delete(int questionId) {
