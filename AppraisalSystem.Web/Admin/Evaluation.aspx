@@ -2,8 +2,8 @@
     Language="C#" 
     MasterPageFile="~/Admin/MasterPageAdmin.master"
      AutoEventWireup="true" 
-    CodeBehind="EvaluationTemplate.aspx.cs" 
-    Inherits="AppraisalSystem.Web.Admin.EvaluationTemplate" %>
+    CodeBehind="Evaluation.aspx.cs" 
+    Inherits="AppraisalSystem.Web.Admin.Evaluation" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderUsersArea" runat="server">
      <div>

@@ -1,15 +1,14 @@
 ﻿using AppraisalSystem.Web.EvaluationService;
 using System;
-using System.Collections.Generic;
 
 namespace AppraisalSystem.Web.Admin
 {
-    public partial class EvaluationTemplate : System.Web.UI.Page
+    public partial class Evaluation : System.Web.UI.Page
     {
         private IEvaluationWcfService evaluationService;
         //private IAccountWcfService accountService;
 
-        public EvaluationTemplate()
+        public Evaluation()
         {
             this.evaluationService = new EvaluationWcfServiceClient();
             //this.accountService = new AccountWcfServiceClient();
@@ -24,10 +23,10 @@ namespace AppraisalSystem.Web.Admin
         {
             BindData();
         }
-
+     
         public void BindData()
         {
-            IEnumerable<Evaluation> evaluations = this.evaluationService.GetAllEvaluationsForUser(this.txtAddUser.Text.Trim());
+            var evaluations = this.evaluationService.GetAllEvaluationsForUser(this.txtAddUser.Text.Trim());
             this.dataTable.DataSource = evaluations;
             this.dataTable.DataBind();
         }

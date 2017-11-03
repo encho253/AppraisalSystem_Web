@@ -153,6 +153,14 @@ namespace AppraisalSystem.Web.QuestionService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionWcfService/GetByPosition", ReplyAction="http://tempuri.org/IQuestionWcfService/GetByPositionResponse")]
         System.Threading.Tasks.Task<AppraisalSystem.Web.QuestionService.Question[]> GetByPositionAsync(string position);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionWcfService/GetAllQuestionsByEvaluationTemplate", ReplyAction="http://tempuri.org/IQuestionWcfService/GetAllQuestionsByEvaluationTemplateRespons" +
+            "e")]
+        AppraisalSystem.Web.QuestionService.Question[] GetAllQuestionsByEvaluationTemplate(int evaluationTemplateId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IQuestionWcfService/GetAllQuestionsByEvaluationTemplate", ReplyAction="http://tempuri.org/IQuestionWcfService/GetAllQuestionsByEvaluationTemplateRespons" +
+            "e")]
+        System.Threading.Tasks.Task<AppraisalSystem.Web.QuestionService.Question[]> GetAllQuestionsByEvaluationTemplateAsync(int evaluationTemplateId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -236,6 +244,14 @@ namespace AppraisalSystem.Web.QuestionService {
         
         public System.Threading.Tasks.Task<AppraisalSystem.Web.QuestionService.Question[]> GetByPositionAsync(string position) {
             return base.Channel.GetByPositionAsync(position);
+        }
+        
+        public AppraisalSystem.Web.QuestionService.Question[] GetAllQuestionsByEvaluationTemplate(int evaluationTemplateId) {
+            return base.Channel.GetAllQuestionsByEvaluationTemplate(evaluationTemplateId);
+        }
+        
+        public System.Threading.Tasks.Task<AppraisalSystem.Web.QuestionService.Question[]> GetAllQuestionsByEvaluationTemplateAsync(int evaluationTemplateId) {
+            return base.Channel.GetAllQuestionsByEvaluationTemplateAsync(evaluationTemplateId);
         }
     }
 }

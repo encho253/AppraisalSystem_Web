@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="04617ee1-9baa-4350-b8bd-17c25fb2b0a3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:51360/EvaluationTemplateService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EvaluationTemplateService.xsd" MetadataType="Schema" ID="f3cea474-268d-416f-bee7-b817794e8aba" SourceId="1" SourceUrl="http://localhost:51360/EvaluationTemplateService.svc?xsd=xsd1" />
+    <MetadataFile FileName="EvaluationTemplateService1.xsd" MetadataType="Schema" ID="c567d3c5-1177-45d3-b01f-fba69ffcab11" SourceId="1" SourceUrl="http://localhost:51360/EvaluationTemplateService.svc?xsd=xsd0" />
+    <MetadataFile FileName="EvaluationTemplateService2.xsd" MetadataType="Schema" ID="45416db3-e5b9-4b05-b0bd-05fc713a6c42" SourceId="1" SourceUrl="http://localhost:51360/EvaluationTemplateService.svc?xsd=xsd2" />
+    <MetadataFile FileName="EvaluationTemplateService.disco" MetadataType="Disco" ID="5b6990b7-0bd3-45fd-8ce2-522dbbb312ed" SourceId="1" SourceUrl="http://localhost:51360/EvaluationTemplateService.svc?disco" />
+    <MetadataFile FileName="EvaluationTemplateService.wsdl" MetadataType="Wsdl" ID="9a396076-1e02-4d99-a096-a92c017e9c1f" SourceId="1" SourceUrl="http://localhost:51360/EvaluationTemplateService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

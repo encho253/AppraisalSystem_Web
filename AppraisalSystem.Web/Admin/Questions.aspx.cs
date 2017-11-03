@@ -58,7 +58,8 @@ namespace AppraisalSystem.Web.Admin
                                         x.QuestionsCount,
                                         DisplayField = String.Format("{0} ({1})", x.Key, x.QuestionsCount)
                                     })
-                                    .OrderByDescending(p => p.QuestionsCount);
+                                    .OrderByDescending(p => p.QuestionsCount)
+                                    .ThenBy(p => p.Key);
 
             this.DropDownCompetences.DataSource = datasource;
             this.DropDownCompetences.DataBind();

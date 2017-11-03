@@ -194,9 +194,11 @@
   <ItemGroup>
     <Content Include="Account\Login.aspx" />
     <Content Include="Admin\Competences.aspx" />
+    <Content Include="Admin\CreateEvaluationTemplate.aspx" />
     <Content Include="Admin\CreateForm.aspx" />
     <Content Include="Admin\EvaluationInfo.aspx" />
-    <Content Include="Admin\EvaluationTemplate.aspx" />
+    <Content Include="Admin\Evaluation.aspx" />
+    <Content Include="Admin\EvaluationTemplates.aspx" />
     <Content Include="Admin\Questions.aspx" />
     <Content Include="Admin\Positions.aspx" />
     <Content Include="Admin\Register.aspx" />
@@ -301,9 +303,29 @@
     <None Include="Service References\EvaluationService\EvaluationService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Service References\EvaluationTemplateService\AppraisalSystem.Web.EvaluationTemplateService.EvaluationTemplate.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\EvaluationTemplateService\EvaluationTemplateService.disco" />
+    <None Include="Service References\EvaluationTemplateService\configuration91.svcinfo" />
+    <None Include="Service References\EvaluationTemplateService\configuration.svcinfo" />
+    <None Include="Service References\EvaluationTemplateService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Service References\PositionService\AppraisalSystem.Web.PositionService.Position.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Service References\EvaluationTemplateService\EvaluationTemplateService.wsdl" />
+    <None Include="Service References\EvaluationTemplateService\EvaluationTemplateService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EvaluationTemplateService\EvaluationTemplateService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EvaluationTemplateService\EvaluationTemplateService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\PositionService\PositionService.disco" />
     <None Include="Service References\PositionService\configuration91.svcinfo" />
     <None Include="Service References\PositionService\configuration.svcinfo" />
@@ -396,6 +418,13 @@
     <Compile Include="Admin\Competences.aspx.designer.cs">
       <DependentUpon>Competences.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\CreateEvaluationTemplate.aspx.cs">
+      <DependentUpon>CreateEvaluationTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CreateEvaluationTemplate.aspx.designer.cs">
+      <DependentUpon>CreateEvaluationTemplate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\CreateForm.aspx.cs">
       <DependentUpon>CreateForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -410,12 +439,19 @@
     <Compile Include="Admin\EvaluationInfo.aspx.designer.cs">
       <DependentUpon>EvaluationInfo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\EvaluationTemplate.aspx.cs">
-      <DependentUpon>EvaluationTemplate.aspx</DependentUpon>
+    <Compile Include="Admin\Evaluation.aspx.cs">
+      <DependentUpon>Evaluation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\EvaluationTemplate.aspx.designer.cs">
-      <DependentUpon>EvaluationTemplate.aspx</DependentUpon>
+    <Compile Include="Admin\Evaluation.aspx.designer.cs">
+      <DependentUpon>Evaluation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EvaluationTemplates.aspx.cs">
+      <DependentUpon>EvaluationTemplates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EvaluationTemplates.aspx.designer.cs">
+      <DependentUpon>EvaluationTemplates.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\MasterPageAdmin.master.cs">
       <DependentUpon>MasterPageAdmin.master</DependentUpon>
@@ -480,6 +516,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\EvaluationTemplateService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\PositionService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -523,6 +564,7 @@
     <WCFMetadataStorage Include="Service References\AccountService\" />
     <WCFMetadataStorage Include="Service References\CompetenceService\" />
     <WCFMetadataStorage Include="Service References\EvaluationService\" />
+    <WCFMetadataStorage Include="Service References\EvaluationTemplateService\" />
     <WCFMetadataStorage Include="Service References\PositionService\" />
     <WCFMetadataStorage Include="Service References\QuestionService\" />
   </ItemGroup>

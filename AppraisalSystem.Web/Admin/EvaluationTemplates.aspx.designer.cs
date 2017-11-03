@@ -10,25 +10,7 @@
 namespace AppraisalSystem.Web.Admin {
     
     
-    public partial class EvaluationTemplate {
-        
-        /// <summary>
-        /// txtAddUser control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAddUser;
-        
-        /// <summary>
-        /// SearchUser control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SearchUser;
+    public partial class EvaluationTemplates {
         
         /// <summary>
         /// dataTable control.
@@ -38,5 +20,23 @@ namespace AppraisalSystem.Web.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater dataTable;
+        
+        /// <summary>
+        /// CreateTemplate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton CreateTemplate;
+        
+        /// <summary>
+        /// DropDownPositions control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownPositions;
     }
 }
