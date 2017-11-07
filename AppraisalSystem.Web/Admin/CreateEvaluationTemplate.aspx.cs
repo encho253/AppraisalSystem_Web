@@ -4,6 +4,7 @@ using AppraisalSystem.Web.QuestionService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web.UI.WebControls;
 
 namespace AppraisalSystem.Web.Admin
 {
@@ -60,6 +61,26 @@ namespace AppraisalSystem.Web.Admin
 
             this.dataTable.DataSource = questions;
             this.dataTable.DataBind();
+        }
+
+        protected void button_Click(object sender, EventArgs e)
+        {
+            List<String> df = new List<string>();
+
+            for (int i = 0; i < this.dataTable.Items.Count; i++)
+            {
+                CheckBox checkBox = (CheckBox)this.dataTable.Items[i].FindControl("CheckBox");
+
+                if (checkBox.Checked)
+                {
+                    df.Add(checkBox.Text);
+                }
+            }
+        }
+
+        protected void CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

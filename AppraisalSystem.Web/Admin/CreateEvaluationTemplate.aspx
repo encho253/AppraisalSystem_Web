@@ -24,10 +24,14 @@
                 <td>
                     <asp:Label ID="lblEdit" runat="server" Text='<%#Eval("Content")%>'></asp:Label>
                 </td>
+                <td>
+                    <asp:CheckBox ID="CheckBox" runat="server" OnCheckedChanged ="CheckBox_CheckedChanged" />
+                </td>
             </tr>
         </ItemTemplate>
         <FooterTemplate>
             </table>                
         </FooterTemplate>
     </asp:Repeater>
+   <asp:Button ID="button" runat="server" Text="Submit" OnClick="button_Click"/>
 </asp:Content>

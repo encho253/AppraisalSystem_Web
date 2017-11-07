@@ -52,6 +52,9 @@
                 </table>                
             </FooterTemplate>
         </asp:Repeater>
+
+        <h4>Add new question</h4>
+        <p>Select Competence</p>
         <asp:DropDownList ID="DropDownCompetences" class="btn btn-default dropdown-toggle" DataTextField="DisplayField" DataValueField="Id" runat="server">
         </asp:DropDownList>
         <asp:TextBox ID="txtAddQuestion" CssClass="text-field" TextMode="MultiLine" Rows="2" Width="100%" class="form-control input-sm addQuestion" runat="server" />
