@@ -11,11 +11,14 @@
         Select Position
     </p>
     <asp:DropDownList ID="DropDownPositions" class="btn btn-default dropdown-toggle" runat="server" AutoPostBack="True"></asp:DropDownList>
+    <p>
+        <br />
+    </p>
     <asp:Repeater ID="dataTable" runat="server">
         <HeaderTemplate>
             <table class="table table-hover">
                 <tr>
-                    <th class="thead-inverse">Content
+                    <th class="thead-inverse"> Choose questions for your form
                     </th>
                 </tr>
         </HeaderTemplate>
@@ -34,8 +37,10 @@
             </table>                
         </FooterTemplate>
     </asp:Repeater>
-    <br />
+    <p>Enter template name:</p>
     <asp:TextBox ID="TemplateName" runat="server"></asp:TextBox>
-    <br />
-    <asp:Button ID="button" runat="server" Text="Submit" OnClick="CreateEvalTemplate" />
+    <p>
+        <br />
+    </p>
+    <asp:Button ID="button" runat="server" Text="Create" OnClick="CreateEvalTemplate" />
 </asp:Content>

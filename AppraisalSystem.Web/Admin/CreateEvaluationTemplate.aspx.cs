@@ -20,7 +20,7 @@ namespace AppraisalSystem.Web.Admin
         public IEvaluationTemplateWcfService EvaluationTemplateService { get; set; }
         public IPositionWcfService PositionService { get; set; }
         public IQuestionWcfService QuestionService { get; set; }
-
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             this.DropDownPositions.SelectedIndexChanged += new EventHandler(this.Selection_Change);

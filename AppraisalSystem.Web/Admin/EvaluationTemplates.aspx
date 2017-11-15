@@ -27,8 +27,4 @@
         </FooterTemplate>
     </asp:Repeater>
     <asp:LinkButton ID="CreateTemplate" class="btn btn-success" Text="Create New" runat="server" OnClick="CreateTemplate_Click" />
-    <p>
-        <br />
-        Select Position</p>
-    <asp:DropDownList ID="DropDownPositions" class="btn btn-default dropdown-toggle" runat="server" AutoPostBack="True"></asp:DropDownList>
 </asp:Content>
