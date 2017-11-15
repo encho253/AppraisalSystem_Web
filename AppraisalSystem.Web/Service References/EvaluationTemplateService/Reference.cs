@@ -131,6 +131,14 @@ namespace AppraisalSystem.Web.EvaluationTemplateService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEvaluationTemplateWcfService/GetAllTemplates", ReplyAction="http://tempuri.org/IEvaluationTemplateWcfService/GetAllTemplatesResponse")]
         System.Threading.Tasks.Task<AppraisalSystem.Web.EvaluationTemplateService.EvaluationTemplate[]> GetAllTemplatesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEvaluationTemplateWcfService/CreateEvaluationTemplate", ReplyAction="http://tempuri.org/IEvaluationTemplateWcfService/CreateEvaluationTemplateResponse" +
+            "")]
+        void CreateEvaluationTemplate(int positionId, string templateName, int[] questionsId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEvaluationTemplateWcfService/CreateEvaluationTemplate", ReplyAction="http://tempuri.org/IEvaluationTemplateWcfService/CreateEvaluationTemplateResponse" +
+            "")]
+        System.Threading.Tasks.Task CreateEvaluationTemplateAsync(int positionId, string templateName, int[] questionsId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -166,6 +174,14 @@ namespace AppraisalSystem.Web.EvaluationTemplateService {
         
         public System.Threading.Tasks.Task<AppraisalSystem.Web.EvaluationTemplateService.EvaluationTemplate[]> GetAllTemplatesAsync() {
             return base.Channel.GetAllTemplatesAsync();
+        }
+        
+        public void CreateEvaluationTemplate(int positionId, string templateName, int[] questionsId) {
+            base.Channel.CreateEvaluationTemplate(positionId, templateName, questionsId);
+        }
+        
+        public System.Threading.Tasks.Task CreateEvaluationTemplateAsync(int positionId, string templateName, int[] questionsId) {
+            return base.Channel.CreateEvaluationTemplateAsync(positionId, templateName, questionsId);
         }
     }
 }

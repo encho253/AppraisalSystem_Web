@@ -5,6 +5,7 @@
       <xsd:import schemaLocation="http://localhost:51360/EvaluationTemplateService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:51360/EvaluationTemplateService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:51360/EvaluationTemplateService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DB" />
+      <xsd:import schemaLocation="http://localhost:51360/EvaluationTemplateService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IEvaluationTemplateWcfService_GetAllTemplates_InputMessage">
@@ -13,16 +14,35 @@
   <wsdl:message name="IEvaluationTemplateWcfService_GetAllTemplates_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllTemplatesResponse" />
   </wsdl:message>
+  <wsdl:message name="IEvaluationTemplateWcfService_CreateEvaluationTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateEvaluationTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IEvaluationTemplateWcfService_CreateEvaluationTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateEvaluationTemplateResponse" />
+  </wsdl:message>
   <wsdl:portType name="IEvaluationTemplateWcfService">
     <wsdl:operation name="GetAllTemplates">
       <wsdl:input wsaw:Action="http://tempuri.org/IEvaluationTemplateWcfService/GetAllTemplates" message="tns:IEvaluationTemplateWcfService_GetAllTemplates_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IEvaluationTemplateWcfService/GetAllTemplatesResponse" message="tns:IEvaluationTemplateWcfService_GetAllTemplates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateEvaluationTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEvaluationTemplateWcfService/CreateEvaluationTemplate" message="tns:IEvaluationTemplateWcfService_CreateEvaluationTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEvaluationTemplateWcfService/CreateEvaluationTemplateResponse" message="tns:IEvaluationTemplateWcfService_CreateEvaluationTemplate_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IEvaluationTemplateWcfService" type="tns:IEvaluationTemplateWcfService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetAllTemplates">
       <soap:operation soapAction="http://tempuri.org/IEvaluationTemplateWcfService/GetAllTemplates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateEvaluationTemplate">
+      <soap:operation soapAction="http://tempuri.org/IEvaluationTemplateWcfService/CreateEvaluationTemplate" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -22,11 +22,12 @@
     <MetadataSource Address="http://localhost:51360/EvaluationTemplateService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EvaluationTemplateService.xsd" MetadataType="Schema" ID="f3cea474-268d-416f-bee7-b817794e8aba" SourceId="1" SourceUrl="http://localhost:51360/EvaluationTemplateService.svc?xsd=xsd1" />
-    <MetadataFile FileName="EvaluationTemplateService1.xsd" MetadataType="Schema" ID="c567d3c5-1177-45d3-b01f-fba69ffcab11" SourceId="1" SourceUrl="http://localhost:51360/EvaluationTemplateService.svc?xsd=xsd0" />
     <MetadataFile FileName="EvaluationTemplateService2.xsd" MetadataType="Schema" ID="45416db3-e5b9-4b05-b0bd-05fc713a6c42" SourceId="1" SourceUrl="http://localhost:51360/EvaluationTemplateService.svc?xsd=xsd2" />
+    <MetadataFile FileName="EvaluationTemplateService1.xsd" MetadataType="Schema" ID="c567d3c5-1177-45d3-b01f-fba69ffcab11" SourceId="1" SourceUrl="http://localhost:51360/EvaluationTemplateService.svc?xsd=xsd0" />
     <MetadataFile FileName="EvaluationTemplateService.disco" MetadataType="Disco" ID="5b6990b7-0bd3-45fd-8ce2-522dbbb312ed" SourceId="1" SourceUrl="http://localhost:51360/EvaluationTemplateService.svc?disco" />
+    <MetadataFile FileName="EvaluationTemplateService3.xsd" MetadataType="Schema" ID="4af6a93d-adb7-495b-8685-7d3e1dd4aff1" SourceId="1" SourceUrl="http://localhost:51360/EvaluationTemplateService.svc?xsd=xsd3" />
     <MetadataFile FileName="EvaluationTemplateService.wsdl" MetadataType="Wsdl" ID="9a396076-1e02-4d99-a096-a92c017e9c1f" SourceId="1" SourceUrl="http://localhost:51360/EvaluationTemplateService.svc?wsdl" />
+    <MetadataFile FileName="EvaluationTemplateService.xsd" MetadataType="Schema" ID="f3cea474-268d-416f-bee7-b817794e8aba" SourceId="1" SourceUrl="http://localhost:51360/EvaluationTemplateService.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

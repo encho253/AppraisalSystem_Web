@@ -31,6 +31,15 @@ namespace AppraisalSystem.Web.Admin {
         protected global::System.Web.UI.WebControls.Repeater dataTable;
         
         /// <summary>
+        /// TemplateName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TemplateName;
+        
+        /// <summary>
         /// button control.
         /// </summary>
         /// <remarks>

@@ -22,10 +22,11 @@
         <ItemTemplate>
             <tr class="success">
                 <td>
-                    <asp:Label ID="lblEdit" runat="server" Text='<%#Eval("Content")%>'></asp:Label>
+                    <asp:Label ID="lblQuestionContent" runat="server" Text='<%#Eval("Content")%>'></asp:Label>
+                    <asp:Label ID="LabelId" runat="server" Text='<%#Eval("Id")%>'></asp:Label>
                 </td>
                 <td>
-                    <asp:CheckBox ID="CheckBox" runat="server" OnCheckedChanged ="CheckBox_CheckedChanged" />
+                    <asp:CheckBox ID="CheckBox" runat="server" />
                 </td>
             </tr>
         </ItemTemplate>
@@ -33,5 +34,8 @@
             </table>                
         </FooterTemplate>
     </asp:Repeater>
-   <asp:Button ID="button" runat="server" Text="Submit" OnClick="button_Click"/>
+    <br />
+    <asp:TextBox ID="TemplateName" runat="server"></asp:TextBox>
+    <br />
+    <asp:Button ID="button" runat="server" Text="Submit" OnClick="CreateEvalTemplate" />
 </asp:Content>
