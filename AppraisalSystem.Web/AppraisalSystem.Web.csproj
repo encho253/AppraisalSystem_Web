@@ -197,6 +197,7 @@
     <Content Include="Admin\CreateEvaluationTemplate.aspx" />
     <Content Include="Admin\CreateForm.aspx" />
     <Content Include="Admin\EvaluationInfo.aspx" />
+    <Content Include="Admin\EvaluationTemplateInfo.aspx" />
     <Content Include="Admin\Evaluation.aspx" />
     <Content Include="Admin\EvaluationTemplates.aspx" />
     <Content Include="Admin\Questions.aspx" />
@@ -441,6 +442,13 @@
     </Compile>
     <Compile Include="Admin\EvaluationInfo.aspx.designer.cs">
       <DependentUpon>EvaluationInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EvaluationTemplateInfo.aspx.cs">
+      <DependentUpon>EvaluationTemplateInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EvaluationTemplateInfo.aspx.designer.cs">
+      <DependentUpon>EvaluationTemplateInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Evaluation.aspx.cs">
       <DependentUpon>Evaluation.aspx</DependentUpon>

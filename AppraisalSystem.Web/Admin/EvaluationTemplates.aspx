@@ -18,7 +18,7 @@
         <ItemTemplate>
             <tr>
                 <td>
-                    <a href="EvaluationInfo.aspx?Id=<%#Eval("Id")%>"><%#Eval("Name")%></a>
+                    <a href="EvaluationTemplateInfo.aspx?Id=<%#Eval("Id")%>"><%#Eval("Name")%></a>
                 </td>
             </tr>
         </ItemTemplate>

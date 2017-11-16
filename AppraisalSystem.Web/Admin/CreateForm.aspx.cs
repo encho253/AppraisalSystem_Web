@@ -28,7 +28,7 @@ namespace AppraisalSystem.Web.Admin
 
         public void BindData()
         {
-            var evaluators = this.evaluationService.GetAllEvaluatorsForEvaluation(this.txtAddUser.Text.Trim());
+            var evaluators = this.evaluationService.GetAllEvaluatorsForEvaluation(1);
             this.dataTable.DataSource = evaluators;
             this.dataTable.DataBind();
         }

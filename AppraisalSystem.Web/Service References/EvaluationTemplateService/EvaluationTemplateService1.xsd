@@ -28,4 +28,30 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="DeleteEvaluationTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="templateId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEvaluationTemplateResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEvaluationTemplateById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="evaluationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEvaluationTemplateByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DB" minOccurs="0" name="GetEvaluationTemplateByIdResult" nillable="true" type="q3:EvaluationTemplate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

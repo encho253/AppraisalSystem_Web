@@ -24,7 +24,7 @@
         <ItemTemplate>
             <tr>
                 <td>
-                    <a href="EvaluationInfo.aspx"><asp:Label ID="lblUser" runat="server" Text='<%#Eval("EvalDate")%>'></asp:Label></a>
+                    <a href="EvaluationInfo.aspx?Id=<%#Eval("Id")%>"><asp:Label ID="lblUser" runat="server" Text='<%#Eval("EvalDate")%>'></asp:Label></a>
                 </td>       
             </tr>
         </ItemTemplate>

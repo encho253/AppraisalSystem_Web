@@ -139,6 +139,22 @@ namespace AppraisalSystem.Web.EvaluationTemplateService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEvaluationTemplateWcfService/CreateEvaluationTemplate", ReplyAction="http://tempuri.org/IEvaluationTemplateWcfService/CreateEvaluationTemplateResponse" +
             "")]
         System.Threading.Tasks.Task CreateEvaluationTemplateAsync(int positionId, string templateName, int[] questionsId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEvaluationTemplateWcfService/DeleteEvaluationTemplate", ReplyAction="http://tempuri.org/IEvaluationTemplateWcfService/DeleteEvaluationTemplateResponse" +
+            "")]
+        void DeleteEvaluationTemplate(int templateId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEvaluationTemplateWcfService/DeleteEvaluationTemplate", ReplyAction="http://tempuri.org/IEvaluationTemplateWcfService/DeleteEvaluationTemplateResponse" +
+            "")]
+        System.Threading.Tasks.Task DeleteEvaluationTemplateAsync(int templateId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEvaluationTemplateWcfService/GetEvaluationTemplateById", ReplyAction="http://tempuri.org/IEvaluationTemplateWcfService/GetEvaluationTemplateByIdRespons" +
+            "e")]
+        AppraisalSystem.Web.EvaluationTemplateService.EvaluationTemplate GetEvaluationTemplateById(int evaluationId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEvaluationTemplateWcfService/GetEvaluationTemplateById", ReplyAction="http://tempuri.org/IEvaluationTemplateWcfService/GetEvaluationTemplateByIdRespons" +
+            "e")]
+        System.Threading.Tasks.Task<AppraisalSystem.Web.EvaluationTemplateService.EvaluationTemplate> GetEvaluationTemplateByIdAsync(int evaluationId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -182,6 +198,22 @@ namespace AppraisalSystem.Web.EvaluationTemplateService {
         
         public System.Threading.Tasks.Task CreateEvaluationTemplateAsync(int positionId, string templateName, int[] questionsId) {
             return base.Channel.CreateEvaluationTemplateAsync(positionId, templateName, questionsId);
+        }
+        
+        public void DeleteEvaluationTemplate(int templateId) {
+            base.Channel.DeleteEvaluationTemplate(templateId);
+        }
+        
+        public System.Threading.Tasks.Task DeleteEvaluationTemplateAsync(int templateId) {
+            return base.Channel.DeleteEvaluationTemplateAsync(templateId);
+        }
+        
+        public AppraisalSystem.Web.EvaluationTemplateService.EvaluationTemplate GetEvaluationTemplateById(int evaluationId) {
+            return base.Channel.GetEvaluationTemplateById(evaluationId);
+        }
+        
+        public System.Threading.Tasks.Task<AppraisalSystem.Web.EvaluationTemplateService.EvaluationTemplate> GetEvaluationTemplateByIdAsync(int evaluationId) {
+            return base.Channel.GetEvaluationTemplateByIdAsync(evaluationId);
         }
     }
 }

@@ -248,16 +248,22 @@ namespace AppraisalSystem.Web.EvaluationService {
         System.Threading.Tasks.Task AddEvaluatorToEvaluationAsync(string username, string usernameEvaluator);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEvaluationWcfService/GetAllEvaluatorsForEvaluation", ReplyAction="http://tempuri.org/IEvaluationWcfService/GetAllEvaluatorsForEvaluationResponse")]
-        AppraisalSystem.Web.EvaluationService.User[] GetAllEvaluatorsForEvaluation(string username);
+        AppraisalSystem.Web.EvaluationService.User[] GetAllEvaluatorsForEvaluation(int evaluationId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEvaluationWcfService/GetAllEvaluatorsForEvaluation", ReplyAction="http://tempuri.org/IEvaluationWcfService/GetAllEvaluatorsForEvaluationResponse")]
-        System.Threading.Tasks.Task<AppraisalSystem.Web.EvaluationService.User[]> GetAllEvaluatorsForEvaluationAsync(string username);
+        System.Threading.Tasks.Task<AppraisalSystem.Web.EvaluationService.User[]> GetAllEvaluatorsForEvaluationAsync(int evaluationId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEvaluationWcfService/GetAllEvaluationsForUser", ReplyAction="http://tempuri.org/IEvaluationWcfService/GetAllEvaluationsForUserResponse")]
         AppraisalSystem.Web.EvaluationService.Evaluation[] GetAllEvaluationsForUser(string username);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEvaluationWcfService/GetAllEvaluationsForUser", ReplyAction="http://tempuri.org/IEvaluationWcfService/GetAllEvaluationsForUserResponse")]
         System.Threading.Tasks.Task<AppraisalSystem.Web.EvaluationService.Evaluation[]> GetAllEvaluationsForUserAsync(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEvaluationWcfService/GetEvaluationById", ReplyAction="http://tempuri.org/IEvaluationWcfService/GetEvaluationByIdResponse")]
+        AppraisalSystem.Web.EvaluationService.Evaluation GetEvaluationById(int evaluationId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEvaluationWcfService/GetEvaluationById", ReplyAction="http://tempuri.org/IEvaluationWcfService/GetEvaluationByIdResponse")]
+        System.Threading.Tasks.Task<AppraisalSystem.Web.EvaluationService.Evaluation> GetEvaluationByIdAsync(int evaluationId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -303,12 +309,12 @@ namespace AppraisalSystem.Web.EvaluationService {
             return base.Channel.AddEvaluatorToEvaluationAsync(username, usernameEvaluator);
         }
         
-        public AppraisalSystem.Web.EvaluationService.User[] GetAllEvaluatorsForEvaluation(string username) {
-            return base.Channel.GetAllEvaluatorsForEvaluation(username);
+        public AppraisalSystem.Web.EvaluationService.User[] GetAllEvaluatorsForEvaluation(int evaluationId) {
+            return base.Channel.GetAllEvaluatorsForEvaluation(evaluationId);
         }
         
-        public System.Threading.Tasks.Task<AppraisalSystem.Web.EvaluationService.User[]> GetAllEvaluatorsForEvaluationAsync(string username) {
-            return base.Channel.GetAllEvaluatorsForEvaluationAsync(username);
+        public System.Threading.Tasks.Task<AppraisalSystem.Web.EvaluationService.User[]> GetAllEvaluatorsForEvaluationAsync(int evaluationId) {
+            return base.Channel.GetAllEvaluatorsForEvaluationAsync(evaluationId);
         }
         
         public AppraisalSystem.Web.EvaluationService.Evaluation[] GetAllEvaluationsForUser(string username) {
@@ -317,6 +323,14 @@ namespace AppraisalSystem.Web.EvaluationService {
         
         public System.Threading.Tasks.Task<AppraisalSystem.Web.EvaluationService.Evaluation[]> GetAllEvaluationsForUserAsync(string username) {
             return base.Channel.GetAllEvaluationsForUserAsync(username);
+        }
+        
+        public AppraisalSystem.Web.EvaluationService.Evaluation GetEvaluationById(int evaluationId) {
+            return base.Channel.GetEvaluationById(evaluationId);
+        }
+        
+        public System.Threading.Tasks.Task<AppraisalSystem.Web.EvaluationService.Evaluation> GetEvaluationByIdAsync(int evaluationId) {
+            return base.Channel.GetEvaluationByIdAsync(evaluationId);
         }
     }
 }

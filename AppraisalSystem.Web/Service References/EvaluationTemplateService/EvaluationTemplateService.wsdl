@@ -20,6 +20,18 @@
   <wsdl:message name="IEvaluationTemplateWcfService_CreateEvaluationTemplate_OutputMessage">
     <wsdl:part name="parameters" element="tns:CreateEvaluationTemplateResponse" />
   </wsdl:message>
+  <wsdl:message name="IEvaluationTemplateWcfService_DeleteEvaluationTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEvaluationTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IEvaluationTemplateWcfService_DeleteEvaluationTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEvaluationTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEvaluationTemplateWcfService_GetEvaluationTemplateById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvaluationTemplateById" />
+  </wsdl:message>
+  <wsdl:message name="IEvaluationTemplateWcfService_GetEvaluationTemplateById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvaluationTemplateByIdResponse" />
+  </wsdl:message>
   <wsdl:portType name="IEvaluationTemplateWcfService">
     <wsdl:operation name="GetAllTemplates">
       <wsdl:input wsaw:Action="http://tempuri.org/IEvaluationTemplateWcfService/GetAllTemplates" message="tns:IEvaluationTemplateWcfService_GetAllTemplates_InputMessage" />
@@ -28,6 +40,14 @@
     <wsdl:operation name="CreateEvaluationTemplate">
       <wsdl:input wsaw:Action="http://tempuri.org/IEvaluationTemplateWcfService/CreateEvaluationTemplate" message="tns:IEvaluationTemplateWcfService_CreateEvaluationTemplate_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IEvaluationTemplateWcfService/CreateEvaluationTemplateResponse" message="tns:IEvaluationTemplateWcfService_CreateEvaluationTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEvaluationTemplate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEvaluationTemplateWcfService/DeleteEvaluationTemplate" message="tns:IEvaluationTemplateWcfService_DeleteEvaluationTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEvaluationTemplateWcfService/DeleteEvaluationTemplateResponse" message="tns:IEvaluationTemplateWcfService_DeleteEvaluationTemplate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEvaluationTemplateById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEvaluationTemplateWcfService/GetEvaluationTemplateById" message="tns:IEvaluationTemplateWcfService_GetEvaluationTemplateById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEvaluationTemplateWcfService/GetEvaluationTemplateByIdResponse" message="tns:IEvaluationTemplateWcfService_GetEvaluationTemplateById_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IEvaluationTemplateWcfService" type="tns:IEvaluationTemplateWcfService">
@@ -43,6 +63,24 @@
     </wsdl:operation>
     <wsdl:operation name="CreateEvaluationTemplate">
       <soap:operation soapAction="http://tempuri.org/IEvaluationTemplateWcfService/CreateEvaluationTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEvaluationTemplate">
+      <soap:operation soapAction="http://tempuri.org/IEvaluationTemplateWcfService/DeleteEvaluationTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEvaluationTemplateById">
+      <soap:operation soapAction="http://tempuri.org/IEvaluationTemplateWcfService/GetEvaluationTemplateById" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
