@@ -6,13 +6,15 @@
     Inherits="AppraisalSystem.Web.Admin.Questions" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderUsersArea" runat="server">
-    <div>
-        <h4>Questions</h4>
-    </div>
+    <div class="col-xs-12">
+        <div>
+            <h4>Questions</h4>
+        </div>
 
-    <div class="inlineEl">
-        <p>Select Position</p>
-        <asp:DropDownList ID="DropDownPositions" class="btn btn-default dropdown-toggle" runat="server" AutoPostBack="True"></asp:DropDownList>
+        <div>
+            <p>Select Position</p>
+            <asp:DropDownList ID="DropDownPositions" class="btn btn-default dropdown-toggle" runat="server" AutoPostBack="True"></asp:DropDownList>
+        </div>
     </div>
     <div>
         <p>
@@ -22,11 +24,11 @@
             <HeaderTemplate>
                 <table class="table table-hover">
                     <tr>
-                        <th class="thead-inverse">Competence
+                        <th class="col-xs-1">ID
                         </th>
-                        <th class="thead-inverse">Content
+                        <th class="col-xs-9">Content
                         </th>
-                        <th class="thead-inverse">Options
+                        <th class="col-xs-2">Options
                         </th>
                     </tr>
             </HeaderTemplate>
@@ -38,7 +40,7 @@
                     <td>
                         <asp:Label ID="lblEdit" runat="server" Text='<%#Eval("Content")%>'></asp:Label>
                         <asp:Label ID="lblId" runat="server" Text='<%#Eval("ID")%>' Visible="false"></asp:Label>
-                        <asp:TextBox ID="txtEdit" runat="server" CssClass="text-field" TextMode="MultiLine" Rows="2" Width="100%" Text='<%# Eval("Content") %>' Visible="false" />
+                        <asp:TextBox ID="txtEdit" runat="server" CssClass="text-field" TextMode="MultiLine" Text='<%# Eval("Content") %>' Visible="false" />
                     </td>
                     <td>
                         <asp:LinkButton ID="lnkEdit" class="btn btn-primary" Text="Edit" runat="server" OnClick="lnkEdit_Click" />
@@ -57,7 +59,7 @@
         <p>Select Competence</p>
         <asp:DropDownList ID="DropDownCompetences" class="btn btn-default dropdown-toggle" DataTextField="DisplayField" DataValueField="Id" runat="server">
         </asp:DropDownList>
-        <asp:TextBox ID="txtAddQuestion" CssClass="text-field" TextMode="MultiLine" Rows="2" Width="100%" class="form-control input-sm addQuestion" runat="server" />
+        <asp:TextBox ID="txtAddQuestion" CssClass="text-field" TextMode="MultiLine" Rows="2" Width="50%" class="form-control input-sm addQuestion" runat="server" />
         <p>
             <br />
         </p>

@@ -8,70 +8,70 @@
     margin-bottom: 10px;
 }
 
-header .home-link {
-    float: left;
-}
-
-header .home-link:hover {
-    float: left;
-    height: 24px;
-}
-
-    header .home-link a {
-        text-decoration: none;
+    header .home-link {
+        float: left;
     }
 
-header#users-area {
-    background-color: whitesmoke;
-}
+        header .home-link:hover {
+            float: left;
+            height: 24px;
+        }
 
-header#admin-area {
-    background-color: #ff8769;
-}
+        header .home-link a {
+            text-decoration: none;
+        }
+
+    header#users-area {
+        background-color: whitesmoke;
+    }
+
+    header#admin-area {
+        background-color: #ff8769;
+    }
 
 aside {
     display: block;
     margin-bottom: 10px;
 }
 
-aside.users-sidebar {
-    float: left;
-    background-color: whitesmoke; 
-    width: 100px;
-}
+    aside.users-sidebar {
+        float: left;
+        background-color: whitesmoke;
+        width: 115px;
+    }
 
-aside.admin-sidebar {
-    float: right;
-    background-color: whitesmoke; 
-    width: 190px;
-}
+    aside.admin-sidebar {
+        float: right;
+        background-color: whitesmoke;
+        width: 190px;
+    }
 
-aside ul {
-    list-style: none;
-    margin: 0;
-    padding: 0px;
-}
+    aside ul {
+        list-style: none;
+        margin: 0;
+        padding: 0px;
+    }
 
-aside ul li {
-    padding: 5px;
-}
+        aside ul li {
+            padding: 5px;
+        }
 
-aside ul li:hover {
-    background-color: #e8a950;
-}
-    
-aside a {
-    text-decoration: none;
-}
+            aside ul li:hover {
+                background-color: #e8a950;
+            }
+
+    aside a {
+        text-decoration: none;
+    }
 
 .content {
     float: left;
     margin-left: 10px;
 }
 
-.content:after {
-    clear: both;
-}
+    .content:after {
+        clear: both;
+    }
 
 #welcome-text {
     font-size: 24px;
@@ -85,7 +85,6 @@ aside a {
     height: 35px;
     border-radius: 3px;
     background-color: rgba(153, 235, 253, 1);
-    background-image: url('Images/users.png');
     background-position: center;
     background-repeat: no-repeat;
     background-position-y: 60px;
@@ -103,13 +102,6 @@ aside a {
         background-color: rgba(255, 106, 0, 0.70);
     }
 
-.users-icon {
-    background-image: url('Images/users.png');
-}
-
-.administrators-icon {
-    background-image: url('Images/administrator.png');
-}
 
 footer {
     display: block;

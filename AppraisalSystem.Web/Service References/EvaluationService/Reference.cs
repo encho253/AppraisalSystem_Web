@@ -242,10 +242,10 @@ namespace AppraisalSystem.Web.EvaluationService {
         System.Threading.Tasks.Task CreateEvaluationAsync(int userId, int evaluationTemplateId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEvaluationWcfService/AddEvaluatorToEvaluation", ReplyAction="http://tempuri.org/IEvaluationWcfService/AddEvaluatorToEvaluationResponse")]
-        void AddEvaluatorToEvaluation(string username, string usernameEvaluator);
+        void AddEvaluatorToEvaluation(int evaluationId, string evaluatorUsername);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEvaluationWcfService/AddEvaluatorToEvaluation", ReplyAction="http://tempuri.org/IEvaluationWcfService/AddEvaluatorToEvaluationResponse")]
-        System.Threading.Tasks.Task AddEvaluatorToEvaluationAsync(string username, string usernameEvaluator);
+        System.Threading.Tasks.Task AddEvaluatorToEvaluationAsync(int evaluationId, string evaluatorUsername);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEvaluationWcfService/GetAllEvaluatorsForEvaluation", ReplyAction="http://tempuri.org/IEvaluationWcfService/GetAllEvaluatorsForEvaluationResponse")]
         AppraisalSystem.Web.EvaluationService.User[] GetAllEvaluatorsForEvaluation(int evaluationId);
@@ -301,12 +301,12 @@ namespace AppraisalSystem.Web.EvaluationService {
             return base.Channel.CreateEvaluationAsync(userId, evaluationTemplateId);
         }
         
-        public void AddEvaluatorToEvaluation(string username, string usernameEvaluator) {
-            base.Channel.AddEvaluatorToEvaluation(username, usernameEvaluator);
+        public void AddEvaluatorToEvaluation(int evaluationId, string evaluatorUsername) {
+            base.Channel.AddEvaluatorToEvaluation(evaluationId, evaluatorUsername);
         }
         
-        public System.Threading.Tasks.Task AddEvaluatorToEvaluationAsync(string username, string usernameEvaluator) {
-            return base.Channel.AddEvaluatorToEvaluationAsync(username, usernameEvaluator);
+        public System.Threading.Tasks.Task AddEvaluatorToEvaluationAsync(int evaluationId, string evaluatorUsername) {
+            return base.Channel.AddEvaluatorToEvaluationAsync(evaluationId, evaluatorUsername);
         }
         
         public AppraisalSystem.Web.EvaluationService.User[] GetAllEvaluatorsForEvaluation(int evaluationId) {

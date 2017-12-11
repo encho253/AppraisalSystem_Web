@@ -58,5 +58,10 @@ namespace AppraisalSystem.Web.Admin
                 this.QuestionsRepeater.DataBind();
             }
         }
+
+        protected void AddEvaluator_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

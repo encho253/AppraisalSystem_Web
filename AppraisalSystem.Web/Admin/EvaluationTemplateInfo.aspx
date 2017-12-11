@@ -10,9 +10,9 @@
         <HeaderTemplate>
             <table class="table table-hover">
                 <tr>
-                    <th class="thead-inverse">Id
+                    <th class="thead-inverse col-xs-1">Id
                     </th>
-                     <th class="thead-inverse">Content
+                     <th class="thead-inverse col-xs-11">Content
                     </th>
                 </tr>
         </HeaderTemplate>

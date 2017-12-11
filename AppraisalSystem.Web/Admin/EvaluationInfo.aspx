@@ -1,19 +1,19 @@
 ﻿<%@ Page Title="EvaluationInfo"
-     Language="C#" 
-    MasterPageFile="~/Admin/MasterPageAdmin.master" 
-    AutoEventWireup="true" 
-    CodeBehind="EvaluationInfo.aspx.cs" 
+    Language="C#"
+    MasterPageFile="~/Admin/MasterPageAdmin.master"
+    AutoEventWireup="true"
+    CodeBehind="EvaluationInfo.aspx.cs"
     Inherits="AppraisalSystem.Web.Admin.EvaluationInfo" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderUsersArea" runat="server">
-     <asp:Label ID="LabelName" runat="server"></asp:Label>
+    <asp:Label ID="LabelName" runat="server"></asp:Label>
     <asp:Repeater ID="QuestionsRepeater" runat="server">
         <HeaderTemplate>
             <table class="table table-hover">
                 <tr>
                     <th class="thead-inverse">Id
                     </th>
-                     <th class="thead-inverse">Content
+                    <th class="thead-inverse">Content
                     </th>
                 </tr>
         </HeaderTemplate>
@@ -65,7 +65,12 @@
             <asp:Label ID="Label5" runat="server" Text="Evaluators"></asp:Label>
             </table>      
               <%--<asp:TextBox ID="txtAddEvaluator" Width="100%" class="form-control input-sm" runat="server" />--%>
-           <%-- <asp:LinkButton ID="AddEvaluator" class="btn btn-success" Text="Add Evaluator" OnClick="AddEvaluator_Click" runat="server" />--%>
+            <%-- <asp:LinkButton ID="AddEvaluator" class="btn btn-success" Text="Add Evaluator" OnClick="AddEvaluator_Click" runat="server" />--%>
         </FooterTemplate>
     </asp:Repeater>
+    <asp:TextBox ID="txtAddQuestion" CssClass="text-field" TextMode="MultiLine" Rows="2" Width="100%" class="form-control input-sm addQuestion" runat="server" />
+    <p>
+        <br />
+    </p>
+    <asp:Button ID="AddEvaluator" class="btn btn-success addQuestion" Text="Add Evaluator" OnClick="AddEvaluator_Click" runat="server" />
 </asp:Content>

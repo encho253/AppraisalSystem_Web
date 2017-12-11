@@ -10,10 +10,10 @@
         <HeaderTemplate>
             <table class="table table-hover">
                 <tr>
-                    <th class="thead-inverse">
+                    <th class="thead-inverse  col-xs-10">
                         <asp:Label ID="LabelEvaluators" runat="server" Text="Competence" />
                     </th>
-                    <th class="thead-inverse">
+                    <th class="thead-inverse col-xs-2">
                         <asp:Label ID="Options" runat="server" Text="Options" />
                     </th>
                 </tr>
@@ -38,6 +38,11 @@
         </FooterTemplate>
     </asp:Repeater>
     <p>Add new competence for this position :</p>
-    <asp:TextBox ID="txtAddCompetence" Width="100%" class="form-control input-sm" runat="server" />
-    <asp:Button ID="AddCompetence" class="btn btn-success" Text="Add" OnClick="AddCompetence_Click" runat="server" />
+
+    <div class="container">
+        <div class="row">
+            <asp:TextBox ID="txtAddCompetence" Width="100%" class="form-control input-sm col-xs-10" runat="server" />
+            <asp:Button ID="AddCompetence" class="btn btn-success col-xs-2" Text="Add" OnClick="AddCompetence_Click" runat="server" />
+        </div>
+    </div>
 </asp:Content>

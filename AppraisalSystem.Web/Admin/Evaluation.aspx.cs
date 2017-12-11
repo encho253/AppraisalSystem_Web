@@ -30,9 +30,5 @@ namespace AppraisalSystem.Web.Admin
             this.dataTable.DataSource = evaluations;
             this.dataTable.DataBind();
         }
-
-        protected void AddEvaluator_Click(object sender, EventArgs e)
-        {
-        }
     }
 }

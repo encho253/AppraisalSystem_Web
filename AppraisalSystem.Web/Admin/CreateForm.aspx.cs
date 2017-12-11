@@ -38,7 +38,7 @@ namespace AppraisalSystem.Web.Admin
             RepeaterItem item = ((LinkButton)sender).Parent as RepeaterItem;
             string evaluator = ((TextBox)item.FindControl("txtAddEvaluator")).Text.Trim();
 
-            this.evaluationService.AddEvaluatorToEvaluation(this.txtAddUser.Text.Trim(), evaluator);
+            //this.evaluationService.AddEvaluatorToEvaluation(this.txtAddUser.Text.Trim(), evaluator);
 
             BindData();
         }

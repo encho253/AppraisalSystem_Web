@@ -6,19 +6,27 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <header id="users-area">Admin Area</header>
-    <aside class="users-sidebar">
-        <ul>           
-            <li><a href="Positions.aspx">Positions</a></li>
-            <li><a href="Competences.aspx">Competences</a></li>
-            <li><a href="Questions.aspx">Questions</a></li>
-            <li><a href="EvaluationTemplates.aspx">Templates</a></li>
-            <li><a href="Evaluation.aspx">Evaluation</a></li>
-            <li><a href="CreateForm.aspx">New form</a></li>
-            <li><a href="Register.aspx">Create user</a></li>
-            <li><a href="Results.aspx">Results</a></li>
-        </ul>
-    </aside>
-    <div class="content">
-        <asp:ContentPlaceHolder ID="ContentPlaceHolderUsersArea" runat="server" />
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col col-sm-2">
+                <aside class="users-sidebar">
+                    <ul>
+                        <li><a href="Positions.aspx">Positions</a></li>
+                        <li><a href="Competences.aspx">Competences</a></li>
+                        <li><a href="Questions.aspx">Questions</a></li>
+                        <li><a href="EvaluationTemplates.aspx">Templates</a></li>
+                        <li><a href="Evaluation.aspx">Evaluation</a></li>
+                        <li><a href="CreateForm.aspx">New form</a></li>
+                        <li><a href="Register.aspx">Create user</a></li>
+                        <li><a href="Results.aspx">Results</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="col col-sm-10">
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderUsersArea" runat="server" />
+                </div>
+            </div>
+        </div>
     </div>
 </asp:Content>
