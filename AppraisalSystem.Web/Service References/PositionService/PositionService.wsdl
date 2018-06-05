@@ -13,6 +13,12 @@
   <wsdl:message name="IPositionWcfService_GetAllPositions_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAllPositionsResponse" />
   </wsdl:message>
+  <wsdl:message name="IPositionWcfService_GetPositionByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPositionByName" />
+  </wsdl:message>
+  <wsdl:message name="IPositionWcfService_GetPositionByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPositionByNameResponse" />
+  </wsdl:message>
   <wsdl:message name="IPositionWcfService_UpdatePosition_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdatePosition" />
   </wsdl:message>
@@ -30,6 +36,10 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IPositionWcfService/GetAllPositions" message="tns:IPositionWcfService_GetAllPositions_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPositionWcfService/GetAllPositionsResponse" message="tns:IPositionWcfService_GetAllPositions_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetPositionByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPositionWcfService/GetPositionByName" message="tns:IPositionWcfService_GetPositionByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPositionWcfService/GetPositionByNameResponse" message="tns:IPositionWcfService_GetPositionByName_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="UpdatePosition">
       <wsdl:input wsaw:Action="http://tempuri.org/IPositionWcfService/UpdatePosition" message="tns:IPositionWcfService_UpdatePosition_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPositionWcfService/UpdatePositionResponse" message="tns:IPositionWcfService_UpdatePosition_OutputMessage" />
@@ -43,6 +53,15 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetAllPositions">
       <soap:operation soapAction="http://tempuri.org/IPositionWcfService/GetAllPositions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPositionByName">
+      <soap:operation soapAction="http://tempuri.org/IPositionWcfService/GetPositionByName" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

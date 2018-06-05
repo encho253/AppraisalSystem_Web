@@ -3,6 +3,7 @@ using AppraisalSystem.Web.PositionService;
 using AppraisalSystem.Web.QuestionService;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web.UI.WebControls;
 
@@ -13,14 +14,15 @@ namespace AppraisalSystem.Web.Admin
         private IQuestionWcfService questionService;
         private ICompetenceWcfService competenceService;
         private IPositionWcfService positionService;
-        private IEnumerable<Question> questions;
+        private IEnumerable<QuestionService.Question> questions;
+        protected System.Web.UI.WebControls.Repeater PlayerRepeater;
 
         public Questions()
         {
             this.questionService = new QuestionWcfServiceClient();
             this.competenceService = new CompetenceWcfServiceClient();
             this.positionService = new PositionWcfServiceClient();
-            this.questions = new List<Question>();
+            this.questions = new List<QuestionService.Question>();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -35,13 +37,16 @@ namespace AppraisalSystem.Web.Admin
 
                 BindCompetences();
                 BindQuestions();
-            }        
+            }
         }
 
         protected void BindQuestions()
         {
-            this.questions = this.questionService.GetByPosition(this.DropDownPositions.SelectedValue);
-            this.dataTable.DataSource = questions;
+            IEnumerable<Position> positions = this.positionService.GetAllPositions();
+            int positionId = SelectedPositionId(positions);
+
+            var datasource = this.competenceService.GetAllCompetencesByPosition(positionId).Where(x => x.QuestionsCount > 0);
+            this.dataTable.DataSource = datasource;
             this.dataTable.DataBind();
         }
 
@@ -79,6 +84,39 @@ namespace AppraisalSystem.Web.Admin
                 .Id;
 
             return positionId;
+        }
+
+        override protected void OnInit(EventArgs e)
+        {
+            InitializeComponent();
+            base.OnInit(e);
+        }
+
+        private void InitializeComponent()
+        {
+            this.dataTable.ItemDataBound += new System.Web.UI.WebControls.RepeaterItemEventHandler(this.CategoryRepeater_ItemDataBound);
+            this.Load += new System.EventHandler(this.Page_Load);
+
+        }
+
+        private void CategoryRepeater_ItemDataBound(object sender, System.Web.UI.WebControls.RepeaterItemEventArgs e)
+        {
+            RepeaterItem item = e.Item;
+            
+            IEnumerable<Position> positions = this.positionService.GetAllPositions();
+            int positionId = SelectedPositionId(positions);
+          
+            if ((item.ItemType == ListItemType.Item) ||
+                (item.ItemType == ListItemType.AlternatingItem))
+            {
+                PlayerRepeater = (Repeater)item.FindControl("PlayerRepeater");
+                string competenceKey = ((Label)item.FindControl("Label1")).Text.Trim();
+
+                var datasource = this.competenceService.GetAllCompetencesByPosition(positionId).Where(x => x.QuestionsCount > 0 && x.Key == competenceKey);
+
+                PlayerRepeater.DataSource = datasource.First().Questions;
+                PlayerRepeater.DataBind();
+            }
         }
 
         private void ToggleElements(RepeaterItem item, bool isEdit)

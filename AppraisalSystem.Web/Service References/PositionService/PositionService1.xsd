@@ -13,6 +13,20 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetPositionByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="positionName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPositionByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DB" minOccurs="0" name="GetPositionByNameResult" nillable="true" type="q2:Position" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="UpdatePosition">
     <xs:complexType>
       <xs:sequence>

@@ -84,6 +84,12 @@ namespace AppraisalSystem.Web.PositionService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPositionWcfService/GetAllPositions", ReplyAction="http://tempuri.org/IPositionWcfService/GetAllPositionsResponse")]
         System.Threading.Tasks.Task<AppraisalSystem.Web.PositionService.Position[]> GetAllPositionsAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPositionWcfService/GetPositionByName", ReplyAction="http://tempuri.org/IPositionWcfService/GetPositionByNameResponse")]
+        AppraisalSystem.Web.PositionService.Position GetPositionByName(string positionName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPositionWcfService/GetPositionByName", ReplyAction="http://tempuri.org/IPositionWcfService/GetPositionByNameResponse")]
+        System.Threading.Tasks.Task<AppraisalSystem.Web.PositionService.Position> GetPositionByNameAsync(string positionName);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPositionWcfService/UpdatePosition", ReplyAction="http://tempuri.org/IPositionWcfService/UpdatePositionResponse")]
         void UpdatePosition(int id, string positionName);
         
@@ -130,6 +136,14 @@ namespace AppraisalSystem.Web.PositionService {
         
         public System.Threading.Tasks.Task<AppraisalSystem.Web.PositionService.Position[]> GetAllPositionsAsync() {
             return base.Channel.GetAllPositionsAsync();
+        }
+        
+        public AppraisalSystem.Web.PositionService.Position GetPositionByName(string positionName) {
+            return base.Channel.GetPositionByName(positionName);
+        }
+        
+        public System.Threading.Tasks.Task<AppraisalSystem.Web.PositionService.Position> GetPositionByNameAsync(string positionName) {
+            return base.Channel.GetPositionByNameAsync(positionName);
         }
         
         public void UpdatePosition(int id, string positionName) {

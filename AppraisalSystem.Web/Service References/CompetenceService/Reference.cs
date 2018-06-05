@@ -90,6 +90,9 @@ namespace AppraisalSystem.Web.CompetenceService {
         private string KeyField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private AppraisalSystem.Web.CompetenceService.Question[] QuestionsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int QuestionsCountField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -129,6 +132,19 @@ namespace AppraisalSystem.Web.CompetenceService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public AppraisalSystem.Web.CompetenceService.Question[] Questions {
+            get {
+                return this.QuestionsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.QuestionsField, value) != true)) {
+                    this.QuestionsField = value;
+                    this.RaisePropertyChanged("Questions");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int QuestionsCount {
             get {
                 return this.QuestionsCountField;
@@ -137,6 +153,99 @@ namespace AppraisalSystem.Web.CompetenceService {
                 if ((this.QuestionsCountField.Equals(value) != true)) {
                     this.QuestionsCountField = value;
                     this.RaisePropertyChanged("QuestionsCount");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Question", Namespace="http://schemas.datacontract.org/2004/07/DB")]
+    [System.SerializableAttribute()]
+    public partial class Question : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CompetenceIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ContentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> PositionIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CompetenceId {
+            get {
+                return this.CompetenceIdField;
+            }
+            set {
+                if ((this.CompetenceIdField.Equals(value) != true)) {
+                    this.CompetenceIdField = value;
+                    this.RaisePropertyChanged("CompetenceId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Content {
+            get {
+                return this.ContentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ContentField, value) != true)) {
+                    this.ContentField = value;
+                    this.RaisePropertyChanged("Content");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> PositionId {
+            get {
+                return this.PositionIdField;
+            }
+            set {
+                if ((this.PositionIdField.Equals(value) != true)) {
+                    this.PositionIdField = value;
+                    this.RaisePropertyChanged("PositionId");
                 }
             }
         }
