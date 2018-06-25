@@ -26,7 +26,6 @@
             <tr class="success">
                 <td>
                     <asp:Label ID="lblQuestionContent" runat="server" Text='<%#Eval("Content")%>'></asp:Label>
-                    <asp:Label ID="LabelId" runat="server" Text='<%#Eval("Id")%>'></asp:Label>
                 </td>
                 <td>
                     <asp:CheckBox ID="CheckBox" runat="server" />
